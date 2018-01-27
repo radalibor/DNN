@@ -1,0 +1,14 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Services.Syndication.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Services.Syndication.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Services.Syndication.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Instrumentation.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.log4net.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Instrumentation.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Instrumentation.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.log4net.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\obj\Debug\DotNetNuke.Syndication.csprojResolveAssemblyReference.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\obj\Debug\DotNetNuke.Syndication.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\obj\Debug\DotNetNuke.Services.Syndication.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\obj\Debug\DotNetNuke.Services.Syndication.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Services.Syndication.dll.CodeAnalysisLog.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Services.Syndication.dll.lastcodeanalysissucceeded

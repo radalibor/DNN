@@ -1,0 +1,7 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\bin\DotNetNuke.log4net.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\bin\DotNetNuke.log4net.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\obj\Debug\DotNetNuke.Log4Net.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\obj\Debug\DotNetNuke.log4net.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\obj\Debug\DotNetNuke.log4net.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\bin\DotNetNuke.log4net.dll.CodeAnalysisLog.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Log4net\bin\DotNetNuke.log4net.dll.lastcodeanalysissucceeded

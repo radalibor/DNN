@@ -1,0 +1,6 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Twitter\bin\DotNetNuke.Authentication.Twitter.XML
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Twitter\bin\DotNetNuke.Authentication.Twitter.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Twitter\bin\DotNetNuke.Authentication.Twitter.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Twitter\obj\Debug\DotNetNuke.Authentication.Twitter.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Twitter\obj\Debug\DotNetNuke.Authentication.Twitter.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Twitter\obj\Debug\DotNetNuke.Authentication.Twitter.pdb

@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\bin\DotNetNuke.Services.Syndication.dll">
+   <Modules>
+    <Module Name="dotnetnuke.services.syndication.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'DotNetNuke.Services.Syndication.dll' with a strong name key.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+       <Issue Name="NoAttribute" Certainty="95" Level="CriticalError">Because 'DotNetNuke.Services.Syndication.dll' exposes externally visible types, mark it with ComVisible(false) at the assembly level and then mark all types within the assembly that should be exposed to COM clients with ComVisible(true).</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="DotNetNuke.Services.Syndication">
+       <Types>
+        <Type Name="GenericRssChannel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'GenericRssChannel' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'RssChannelBase&lt;GenericRssElement, GenericRssElement&gt;'</Issue>
+          </Message>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'GenericRssChannel'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Image" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="BaseType" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="GenericRssChannel.cs" Line="59">The property name 'GenericRssChannel.Image' is confusing given the existence of inherited method 'RssChannelBase&lt;GenericRssElement, GenericRssElement&gt;.GetImage()'. Rename or remove this property.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadChannel(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="GenericRssChannel.cs" Line="65">Change the type of parameter 'url' of method 'GenericRssChannel.LoadChannel(string)' from string to System.Uri, or provide an overload of 'GenericRssChannel.LoadChannel(string)', that allows 'url' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadChannel(System.Xml.XmlDocument)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="GenericRssChannel.cs" Line="72">Modify member 'GenericRssChannel.LoadChannel(XmlDocument)' so that it no longer exposes the concrete type 'XmlDocument'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="GenericRssElement" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'GenericRssElement'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="GenericRssHttpHandlerBase" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'GenericRssHttpHandlerBase' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'RssHttpHandlerBase&lt;GenericRssChannel, GenericRssElement, GenericRssElement&gt;'</Issue>
+          </Message>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'GenericRssHttpHandlerBase'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="InitEventHandler" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">Remove 'InitEventHandler' and replace its usage with EventHandler&lt;T&gt;</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Opml" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Opml" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Opml' in type name 'Opml'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#AddOutline(System.String,System.String,System.Uri,System.String,DotNetNuke.Services.Syndication.OpmlOutlines)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="251">Change 'OpmlOutlines' in 'Opml.AddOutline(string, string, Uri, string, OpmlOutlines)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetXml()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="262">Change 'Opml.GetXml()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadFromFile(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="368">Modify 'Opml.LoadFromFile(string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadFromXml(System.Xml.XmlDocument)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="470">Modify 'Opml.LoadFromXml(XmlDocument)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="375">Modify member 'Opml.LoadFromXml(XmlDocument)' so that it no longer exposes the concrete type 'XmlDocument'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+            <Message Id="windowRight" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="393">'Opml.LoadFromXml(XmlDocument)' declares a variable, 'windowRight', of type 'XmlNode', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="402">Because the behavior of 'DateTime.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Opml.LoadFromXml(XmlDocument)' with a call to 'DateTime.Parse(string, IFormatProvider)'. If the result of 'DateTime.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="407">Because the behavior of 'DateTime.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Opml.LoadFromXml(XmlDocument)' with a call to 'DateTime.Parse(string, IFormatProvider)'. If the result of 'DateTime.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="380">In externally visible method 'Opml.LoadFromXml(XmlDocument)', validate parameter 'doc' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Outlines" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="231">Change 'Opml.Outlines' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="231">Change 'OpmlOutlines' in 'Opml.Outlines' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ParseXml(System.Xml.XmlElement)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="488">Modify 'Opml.ParseXml(XmlElement)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="498">Modify 'Opml.ParseXml(XmlElement)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="507">Modify 'Opml.ParseXml(XmlElement)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="519">Modify 'Opml.ParseXml(XmlElement)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="486">Because the behavior of 'DateTime.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Opml.ParseXml(XmlElement)' with a call to 'DateTime.Parse(string, IFormatProvider)'. If the result of 'DateTime.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VertScrollState" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Vert" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="Opml.cs" Line="171">Correct the spelling of 'Vert' in member name 'Opml.VertScrollState' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OpmlDownloadManager" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#DownloadOpmlFeed(System.Uri)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="110">In method 'OpmlDownloadManager.DownloadOpmlFeed(Uri)', call System.IDisposable.Dispose on object 'new MemoryStream(feed)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="107">In method 'OpmlDownloadManager.DownloadOpmlFeed(Uri)', call System.IDisposable.Dispose on object 'new WebClient()' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="118">Modify 'OpmlDownloadManager.DownloadOpmlFeed(Uri)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetTempFileNamePrefixFromUrl(System.Uri)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="255">Modify 'OpmlDownloadManager.GetTempFileNamePrefixFromUrl(Uri)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="253">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'OpmlDownloadManager.GetTempFileNamePrefixFromUrl(Uri)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrepareTempDir()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="241">Modify 'OpmlDownloadManager.PrepareTempDir()' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryLoadFromDisk(System.Uri)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="181">Modify 'OpmlDownloadManager.TryLoadFromDisk(Uri)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="169">Modify 'OpmlDownloadManager.TryLoadFromDisk(Uri)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="191">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'OpmlDownloadManager.TryLoadFromDisk(Uri)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="191">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'OpmlDownloadManager.TryLoadFromDisk(Uri)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TrySaveToDisk(System.Xml.XmlDocument,System.Uri,System.DateTime)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="219">Modify 'OpmlDownloadManager.TrySaveToDisk(XmlDocument, Uri, DateTime)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="211">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'OpmlDownloadManager.TrySaveToDisk(XmlDocument, Uri, DateTime)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlDownloadManager.cs" Line="213">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'OpmlDownloadManager.TrySaveToDisk(XmlDocument, Uri, DateTime)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OpmlOutline" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Opml" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Opml' in type name 'OpmlOutline'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Outlines" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlOutline.cs" Line="152">Change 'OpmlOutline.Outlines' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlOutline.cs" Line="152">Change 'OpmlOutlines' in 'OpmlOutline.Outlines' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToXml" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlOutline.cs" Line="157">Modify member 'OpmlOutline.ToXml' so that it no longer exposes the concrete type 'XmlElement'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Type" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="BaseType" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlOutline.cs" Line="76">The property name 'OpmlOutline.Type' is confusing given the existence of inherited method 'object.GetType()'. Rename or remove this property.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Version" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\OPML" File="OpmlOutline.cs" Line="146">The 'this' parameter (or 'Me' in Visual Basic) of 'OpmlOutline.Version' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OpmlOutlines" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'OpmlOutlines' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'List&lt;OpmlOutline&gt;'</Issue>
+          </Message>
+          <Message Id="Opml" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Opml' in type name 'OpmlOutlines'.</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">Rename 'OpmlOutlines' to end in 'Collection'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="PreRenderEventHandler" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">Remove 'PreRenderEventHandler' and replace its usage with EventHandler&lt;T&gt;</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="RssChannelBase`2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssChannelBase&lt;RssItemType, RssImageType&gt;'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="75" Level="CriticalWarning">On type 'RssChannelBase&lt;RssItemType, RssImageType&gt;', correct the spelling of 'Rss' in generic type parameter name 'RssImageType'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="75" Level="CriticalWarning">On type 'RssChannelBase&lt;RssItemType, RssImageType&gt;', correct the spelling of 'Rss' in generic type parameter name 'RssItemType'.</Issue>
+          </Message>
+          <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+           <Issue Name="TypeTypeParameter" Certainty="95" Level="Error">On type 'RssChannelBase&lt;RssItemType, RssImageType&gt;', prefix generic type parameter name 'RssImageType' with 'T'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="95" Level="Error">On type 'RssChannelBase&lt;RssItemType, RssImageType&gt;', prefix generic type parameter name 'RssItemType' with 'T'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetImage()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="124">Change 'RssChannelBase&lt;RssItemType, RssImageType&gt;.GetImage()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="44">Change 'List&lt;RssItemType&gt;' in 'RssChannelBase&lt;RssItemType, RssImageType&gt;.Items' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadFromUrl(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="58">Change the type of parameter 'url' of method 'RssChannelBase&lt;RssItemType, RssImageType&gt;.LoadFromUrl(string)' from string to System.Uri, or provide an overload of 'RssChannelBase&lt;RssItemType, RssImageType&gt;.LoadFromUrl(string)', that allows 'url' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadFromXml(System.Xml.XmlDocument)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="70">Modify member 'RssChannelBase&lt;RssItemType, RssImageType&gt;.LoadFromXml(XmlDocument)' so that it no longer exposes the concrete type 'XmlDocument'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SaveAsXml()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="101">Modify member 'RssChannelBase&lt;RssItemType, RssImageType&gt;.SaveAsXml()' so that it no longer exposes the concrete type 'XmlDocument'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SaveAsXml(System.Xml.XmlDocument)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Empty" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="106">In member 'RssChannelBase&lt;RssItemType, RssImageType&gt;.SaveAsXml(XmlDocument)', correct the casing of 'Empty' in parameter name 'EmptyRssXml' by changing it to 'empty'.</Issue>
+            </Message>
+            <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="106">In method 'RssChannelBase&lt;RssItemType, RssImageType&gt;.SaveAsXml(XmlDocument)', correct the spelling of 'Rss' in parameter name 'EmptyRssXml' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="106">Modify member 'RssChannelBase&lt;RssItemType, RssImageType&gt;.SaveAsXml(XmlDocument)' so that it no longer exposes the concrete type 'XmlDocument'. Use IXPathNavigable to represent XML data sources.</Issue>
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="106">Modify member 'RssChannelBase&lt;RssItemType, RssImageType&gt;.SaveAsXml(XmlDocument)' so that it no longer exposes the concrete type 'XmlDocument'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssChannelBase.cs" Line="108">In externally visible method 'RssChannelBase&lt;RssItemType, RssImageType&gt;.SaveAsXml(XmlDocument)', validate parameter 'EmptyRssXml' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RssDataSource" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'RssDataSource' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'DataSourceControl', 'Control'</Issue>
+          </Message>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssDataSource'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Url" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDataSource.cs" Line="66">Change the type of property 'RssDataSource.Url' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RssDataSourceView" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'RssDataSourceView' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'DataSourceView'</Issue>
+          </Message>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssDataSourceView'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Select(System.Web.UI.DataSourceSelectArguments,System.Web.UI.DataSourceViewSelectCallback)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDataSource.cs" Line="99">In externally visible method 'RssDataSourceView.Select(DataSourceSelectArguments, DataSourceViewSelectCallback)', validate parameter 'callback' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RssDownloadManager" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#DownloadChannelDom(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="75">In method 'RssDownloadManager.DownloadChannelDom(string)', call System.IDisposable.Dispose on object 'new MemoryStream(feed)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="71">In method 'RssDownloadManager.DownloadChannelDom(string)', call System.IDisposable.Dispose on object 'new WebClient()' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetTempFileNamePrefixFromUrl(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="273">Modify 'RssDownloadManager.GetTempFileNamePrefixFromUrl(string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="271">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RssDownloadManager.GetTempFileNamePrefixFromUrl(string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrepareTempDir()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="258">Modify 'RssDownloadManager.PrepareTempDir()' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryLoadFromDisk(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="148">Modify 'RssDownloadManager.TryLoadFromDisk(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="136">Modify 'RssDownloadManager.TryLoadFromDisk(string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TrySaveToDisk(System.Xml.XmlDocument,System.String,System.DateTime)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="186">Modify 'RssDownloadManager.TrySaveToDisk(XmlDocument, string, DateTime)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="178">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RssDownloadManager.TrySaveToDisk(XmlDocument, string, DateTime)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssDownloadManager.cs" Line="180">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RssDownloadManager.TrySaveToDisk(XmlDocument, string, DateTime)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RssElementBase" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssElementBase'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="RssHttpHandlerBase`3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="AvoidExcessiveParametersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1005" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Certainty="85" Level="Error">Consider a design where 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;' has no more than 2 type parameters.</Issue>
+          </Message>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="75" Level="CriticalWarning">On type 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;', correct the spelling of 'Rss' in generic type parameter name 'RssChannelType'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="75" Level="CriticalWarning">On type 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;', correct the spelling of 'Rss' in generic type parameter name 'RssImageType'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="75" Level="CriticalWarning">On type 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;', correct the spelling of 'Rss' in generic type parameter name 'RssItemType'.</Issue>
+          </Message>
+          <Message Id="T" TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+           <Issue Name="TypeTypeParameter" Certainty="95" Level="Error">On type 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;', prefix generic type parameter name 'RssChannelType' with 'T'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="95" Level="Error">On type 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;', prefix generic type parameter name 'RssImageType' with 'T'.</Issue>
+           <Issue Name="TypeTypeParameter" Certainty="95" Level="Error">On type 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;', prefix generic type parameter name 'RssItemType' with 'T'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#OnInit(System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="ea" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHttpHandlerBase.cs" Line="103">In method 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;.OnInit(EventArgs)', correct the spelling of 'ea' in parameter name 'ea' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnPreRender(System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="ea" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHttpHandlerBase.cs" Line="114">In method 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;.OnPreRender(EventArgs)', correct the spelling of 'ea' in parameter name 'ea' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Web.IHttpHandler.IsReusable" Kind="Property" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#System.Web.IHttpHandler.get_IsReusable()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+             <Messages>
+              <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+               <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHttpHandlerBase.cs" Line="89">Make 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IHttpHandler.IsReusable.get()' and is visible to derived classes.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHttpHandlerBase.cs" Line="67">Make 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;' sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of 'IHttpHandler.ProcessRequest(HttpContext)' and is visible to derived classes.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHttpHandlerBase.cs" Line="76">In externally visible method 'RssHttpHandlerBase&lt;RssChannelType, RssItemType, RssImageType&gt;.IHttpHandler.ProcessRequest(HttpContext)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Init" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'InitEventHandler' as an object named 'sender'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PreRender" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+             <Issue Name="First" Certainty="95" Level="Error">Declare the first parameter of 'PreRenderEventHandler' as an object named 'sender'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RssHttpHandlerHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssHttpHandlerHelper'.</Issue>
+          </Message>
+          <Message TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="CSharp2_0" Certainty="75" Level="CriticalWarning">Because type 'RssHttpHandlerHelper' contains only 'static' members, mark it as 'static' to prevent consumers from inheriting from it.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="RssHyperLink" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+           <Issue Certainty="90" Level="Error">'RssHyperLink' is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: 'HyperLink', 'WebControl', 'Control'</Issue>
+          </Message>
+          <Message Id="HyperLink" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="TypeShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'HyperLink' in type name 'RssHyperLink' exists as a discrete term. If your usage is intended to be single word, case it as 'Hyperlink'.</Issue>
+          </Message>
+          <Message Id="Rss" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Rss' in type name 'RssHyperLink'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.HyperLink.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHyperLink.cs" Line="41">Method 'RssHyperLink.RssHyperLink()' passes a literal string as parameter 'value' of a call to 'HyperLink.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "RSS".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnPreRender(System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssHyperLink.cs" Line="82">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'RssHyperLink.OnPreRender(EventArgs)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="RssXmlHelper" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'RssXmlHelper' is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#ResolveAppRelativeLinkToUrl(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2018-01-26 23:30:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Syndication\RSS" File="RssXmlHelper.cs" Line="177">Because the behavior of 'string.StartsWith(string)' could vary based on the current user's locale settings, replace this call in 'RssXmlHelper.ResolveAppRelativeLinkToUrl(string)' with a call to 'string.StartsWith(string, StringComparison)'. If the result of 'string.StartsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveParametersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1005">
+   <Name>Avoid excessive parameters on generic types</Name>
+   <Description>Avoid generic types with more than two type parameters as users have difficulties understanding what type parameters represent in types with long type parameter lists.</Description>
+   <Resolution Name="Default">Consider a design where {0} has no more than 2 type parameters.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182129.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+   <Name>Avoid uninstantiated internal classes</Name>
+   <Description>An internal class was detected that is apparently never instantiated. This rule does not attempt to detect late-bound creation and will generate false positives if instances of a type are only created in this way (for example, by means of Activator.CreateInstance or by passing the type as an argument to a TypeConverter constructor).</Description>
+   <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182265.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="ComVisibleTypeBaseTypesShouldBeComVisible" Category="Microsoft.Interoperability" CheckId="CA1405">
+   <Name>COM visible type base types should be COM visible</Name>
+   <Description>COM visible types should have an object hierarchy that is uniformly COM visible.</Description>
+   <Resolution Name="Default">{0} is marked ComVisible(true) but has the following ComVisible(false) types in its object hierarchy: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182202.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="TypeShouldBeDiscreteTerm">The compound word '{0}' in type name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Declare event handlers correctly</Name>
+   <Description>By convention, .NET events have two parameters that specify the event sender and event data. Event handler signatures should follow this form: void MyEventHandler(object sender, EventArgs e). The 'sender' parameter is always of type System.Object, even if it is possible to employ a more specific type. The 'e' parameter is always of type System.EventArgs. Events that do not provide event data should use the System.EventHandler delegate type. Event handlers return void so that they can send each event to multiple target methods. Any value returned by a target would be lost after the first call.</Description>
+   <Resolution Name="First">Declare the first parameter of {0} as an object named 'sender'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182133.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="MemberParameter">In member {0}, correct the casing of '{1}' in parameter name {2} by changing it to '{3}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Resolution Name="TypeTypeParameter">On type {0}, correct the spelling of '{1}' in generic type parameter name {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectPrefix" Category="Microsoft.Naming" CheckId="CA1715">
+   <Name>Identifiers should have correct prefix</Name>
+   <Description>Prefix interface names with the letter 'I' to indicate that the type is an interface, as in IFormattable. Prefix generic type parameter names with the letter 'T' and provide them with descriptive names, as in Dictionary&lt;TKey, TValue&gt;, unless a single 'T' is completely self-explanatory, as in Collection&lt;T&gt;. Use Pascal casing for both interface and type parameter names. Use abbreviations sparingly. Do not use the underscore character. Do use similar names when defining a class/interface pair where the class is a standard implementation of the interface. The names should differ only by the letter I prefixed on the interface name, as with Component and IComponent.</Description>
+   <Resolution Name="TypeTypeParameter">On type {0}, prefix generic type parameter name {1} with 'T'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182243.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+   <Name>Identifiers should have correct suffix</Name>
+   <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
+   <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182244.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+   <Name>Interface methods should be callable by child types</Name>
+   <Description>Explicit method implementations are defined with private accessibility. Classes that derive from classes with explicit method implementations and choose to re-declare them on the class will not be able to call into the base class implementation unless the base class has provided an alternate method with appropriate accessibility. When overriding a base class method that has been hidden by explicit interface implementation, in order to call into the base class implementation, a derived class must cast the base pointer to the relevant interface. When calling through this reference, however, the derived class implementation will actually be invoked, resulting in recursion and an eventual stack overflow.</Description>
+   <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182153.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017">
+   <Name>Mark assemblies with ComVisibleAttribute</Name>
+   <Description>The System.Runtime.InteropServices.ComVisible attribute indicates whether COM clients can use the library. Good design dictates that developers explicitly indicate COM visibility. The default value for this attribute is 'true'. However, the best design is to mark the assembly ComVisible false, and then mark types, interfaces, and individual members as ComVisible true, as appropriate.</Description>
+   <Resolution Name="NoAttribute">Because {0} exposes externally visible types, mark it with ComVisible(false) at the assembly level and then mark all types within the assembly that should be exposed to COM clients with ComVisible(true).</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182157.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError, Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059">
+   <Name>Members should not expose certain concrete types</Name>
+   <Description>Members should not expose certain concrete types.</Description>
+   <Resolution Name="Xml">Modify member {0} so that it no longer exposes the concrete type {1}. Use IXPathNavigable to represent XML data sources.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182160.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="PropertyNamesShouldNotMatchGetMethods" Category="Microsoft.Naming" CheckId="CA1721">
+   <Name>Property names should not match get methods</Name>
+   <Description>A Get method was found with the same name as a property. Get methods and properties should have names that clearly distinguish their function. See the design guidelines for information regarding choosing properties over methods.</Description>
+   <Resolution Name="BaseType">The property name {0} is confusing given the existence of inherited method {1}. Rename or remove this property.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182253.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+   <Name>Specify CultureInfo</Name>
+   <Description>If an overload exists that takes a CultureInfo argument, it should always be called in favor of an overload that does not. The CultureInfo type contains culture-specific information required for performing numeric and string operations, such as casing, formatting, and string comparisons. In scenarios where conversion and parsing behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182189.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>Specify StringComparison</Name>
+   <Description>If an overload exists that takes a StringComparison argument, it should always be called in favor of an overload that does not.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052">
+   <Name>Static holder types should be sealed</Name>
+   <Description>Static holder types do not provide functionality that derived instances can extend. Inheriting from such a type indicates a flawed design.</Description>
+   <Resolution Name="CSharp2_0">Because type {0} contains only 'static' members, mark it as 'static' to prevent consumers from inheriting from it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182168.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054">
+   <Name>URI parameters should not be strings</Name>
+   <Description>If a parameter name contains "uri" or "url" or "urn", and it's typed as string, the parameter type should be changed to System.Uri, unless there is an overload method where the same parameter is typed as System.Uri.</Description>
+   <Resolution Name="Default">Change the type of parameter {0} of method {1} from string to System.Uri, or provide an overload of {1}, that allows {0} to be passed as a System.Uri object.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182174.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056">
+   <Name>URI properties should not be strings</Name>
+   <Description>If a property name contains "uri" or "url" or "urn" and it's typed as string, it should be changed to System.Uri.</Description>
+   <Resolution Name="Default">Change the type of property {0} from string to System.Uri.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182175.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003">
+   <Name>Use generic event handler instances</Name>
+   <Description>Do not declare new delegates to be used as event handlers when targeting a version of the .NET Framework that supports generics. Use an instance EventHandler&lt;T&gt; instead.</Description>
+   <Resolution Name="Default">Remove {0} and replace its usage with EventHandler&lt;T&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182178.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

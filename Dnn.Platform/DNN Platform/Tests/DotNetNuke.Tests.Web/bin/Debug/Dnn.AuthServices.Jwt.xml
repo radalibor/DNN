@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.AuthServices.Jwt</name>
+    </assembly>
+    <members>
+        <member name="T:Dnn.AuthServices.Jwt.Auth.JwtAuthMessageHandler">
+            <summary>
+            This class implements Json Web Token (JWT) authentication scheme.
+            For detailed description of JWT refer to:
+            <para>- JTW standard https://tools.ietf.org/html/rfc7519 </para>
+            <para>- Introduction to JSON Web Tokens http://jwt.io/introduction/ </para>
+            </summary>
+        </member>
+        <member name="M:Dnn.AuthServices.Jwt.Components.Common.Controllers.JwtController.ValidateToken(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Validates the received JWT against the databas eand returns username when successful.
+            </summary>
+        </member>
+        <member name="M:Dnn.AuthServices.Jwt.Components.Common.Controllers.JwtController.LoginUser(System.Net.Http.HttpRequestMessage,Dnn.AuthServices.Jwt.Components.Entity.LoginData)">
+            <summary>
+            Validates user login credentials and returns result when successful
+            </summary>
+        </member>
+        <member name="M:Dnn.AuthServices.Jwt.Components.Common.Controllers.JwtController.ValidateAuthHeader(System.Net.Http.Headers.AuthenticationHeaderValue)">
+            <summary>
+            Checks for Authorization header and validates it is JWT scheme. If successful, it returns the token string.
+            </summary>
+            <param name="authHdr">The request auhorization header.</param>
+            <returns>The JWT passed in the request; otherwise, it returns null.</returns>
+        </member>
+        <member name="T:Dnn.AuthServices.Jwt.Components.Entity.LoginData">
+            <summary>
+            Structure used for the Login to obtain a Json Web Token (JWT).
+            </summary>
+        </member>
+        <member name="T:Dnn.AuthServices.Jwt.Data.DataService">
+            -----------------------------------------------------------------------------
+            <summary>
+             This class provides the Data Access Layer for the JWT Authentication library
+            </summary>
+        </member>
+        <member name="M:Dnn.AuthServices.Jwt.Services.MobileController.Logout">
+            <summary>
+            Clients that used JWT login should use this API call to logout and invalidate the tokens.
+            </summary>
+        </member>
+        <member name="M:Dnn.AuthServices.Jwt.Services.MobileController.Login(Dnn.AuthServices.Jwt.Components.Entity.LoginData)">
+            <summary>
+            Clients that want to go cookie-less should call this API to login and receive
+            a Json Web Token (JWT) that allows them to authenticate the users to other
+            secure API endpoints afterwards.
+            </summary>
+            <remarks>AllowAnonymous attribute must stay in this call even though the
+            DnnAuthorize attribute is present at a class level.</remarks>
+        </member>
+        <member name="M:Dnn.AuthServices.Jwt.Services.MobileController.ExtendToken(Dnn.AuthServices.Jwt.Components.Entity.RenewalDto)">
+            <summary>
+            Extends the token expiry. A new JWT is returned to the caller which must be used in
+            new API requests. The caller must pass the renewal token received at the login time.
+            The header still needs to pass the current token for validation even when it is expired.
+            </summary>
+            <remarks>The access token is allowed to get renewed one time only.<br />
+            AllowAnonymous attribute must stay in this call even though the
+            DnnAuthorize attribute is present at a class level.
+            </remarks>
+        </member>
+    </members>
+</doc>

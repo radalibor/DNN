@@ -1,0 +1,2117 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClientDependency.Core</name>
+    </assembly>
+    <members>
+        <member name="T:ClientDependency.Core.BaseLoader">
+            <summary>
+            The base class that exposees all of the basic operations used for rendering dependencies in a request
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.BaseLoader.Dependencies">
+            <summary>
+            Tracks all dependencies and maintains a deduplicated list
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.BaseLoader.Paths">
+            <summary>
+            Tracks all paths and maintains a deduplicated list
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.AddPath(System.String,System.String)">
+            <summary>
+            Adds a path to the current loader
+            </summary>
+            <param name="pathNameAlias"></param>
+            <param name="path"></param>
+            <returns>Returns the current loader instance so you can chain calls together</returns>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.AddPath(ClientDependency.Core.IClientDependencyPath)">
+            <summary>
+            Adds a path to the current loader
+            </summary>
+            <param name="path"></param>
+            <returns>Returns the current loader instance so you can chain calls together</returns>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.RegisterClientDependencies(ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider,System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyPath},System.Configuration.Provider.ProviderCollection)">
+            <summary>
+            Registers dependencies with the specified provider.
+            </summary>
+            <param name="provider"></param>
+            <param name="dependencies"></param>
+            <param name="paths"></param>
+            <param name="currProviders"></param>
+            <remarks>
+            This is the top most overloaded method
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.RegisterDependency(System.Int32,System.Int32,System.String,System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Dynamically registers a dependency into the loader at runtime.
+            This is similar to ScriptManager.RegisterClientScriptInclude.
+            Registers a file dependency with the default provider.
+            </summary>
+            <param name="group">The dependencies group identifier.</param>
+            <param name="priority">The dependency priority.</param>
+            <param name="filePath">The dependency file.</param>
+            <param name="pathNameAlias">The dependency files path alias.</param>
+            <param name="type">The type of the dependency.</param>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.RegisterDependency(System.Int32,System.Int32,System.String,System.String,ClientDependency.Core.ClientDependencyType,System.Object)">
+            <summary>
+            Dynamically registers a dependency into the loader at runtime.
+            This is similar to ScriptManager.RegisterClientScriptInclude.
+            Registers a file dependency with the default provider.
+            </summary>
+            <param name="group">The dependencies group identifier.</param>
+            <param name="priority">The dependency priority.</param>
+            <param name="filePath">The dependency file.</param>
+            <param name="pathNameAlias">The dependency files path alias.</param>
+            <param name="type">The type of the dependency.</param>
+            <param name="htmlAttributes"></param>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.EnsureJsBundleRegistered(System.String)">
+            <summary>
+            Ensures that the bundle with the specified name is registered for output
+            </summary>
+            <param name="bundleName"></param>
+        </member>
+        <member name="M:ClientDependency.Core.BaseLoader.EnsureCssBundleRegistered(System.String)">
+            <summary>
+            Ensures that the bundle with the specified name is registered for output
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.BasicFile">
+            <summary>
+            Represents a dependency file
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.BasicFile.ForceProvider">
+            <summary>
+            This can be empty and will use default provider
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.BasicFile.HtmlAttributes">
+            <summary>
+            Used to store additional attributes in the HTML markup for the item
+            </summary>
+            <remarks>
+            Mostly used for CSS Media, but could be for anything
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.BasicFile.Name">
+            <summary>
+            Name of a framework such as jQuery, Bootstrap, Angular, etc.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.BasicFile.Version">
+            <summary>
+            Version of this resource if it is a framework
+            Note this field is only used when Framework is specified
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.BasicFile.ForceVersion">
+            <summary>
+            Force this version to be used. Meant for skin designers that wish to override
+            choices made by module developers or the framework.
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.BundleDefinition">
+            <summary>
+            Defines all information relating to a pre-defined bundle
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.BundleManager">
+            <summary>
+            Allows creating pre-defined bundles for scrips and styles
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.GetBundles">
+            <summary>
+            Returns all bundles registered
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.GetCssBundles">
+            <summary>
+            Returns all Css bundles registered
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.GetCssBundle(System.String)">
+            <summary>
+            Returns a css bundle by name
+            </summary>
+            <param name="bundleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.GetJsBundles">
+            <summary>
+            Returns all js bundles registered
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.GetJsBundle(System.String)">
+            <summary>
+            Returns a js bundle by name
+            </summary>
+            <param name="bundleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.CreateCssBundle(System.String,System.Int32,ClientDependency.Core.CssFile[])">
+            <summary>
+            Creates a pre-defined bundle and sets the priority for each file supplied, unless any of the files already have a priority set
+            </summary>
+            <param name="name"></param>
+            <param name="priority"></param>
+            <param name="files"></param>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.CreateCssBundle(System.String,System.Int32,System.Int32,ClientDependency.Core.CssFile[])">
+            <summary>
+            Creates a pre-defined bundle and sets the priority and group for each file supplied, unless any of the files already have a priority/group set
+            </summary>
+            <param name="name"></param>
+            <param name="priority"></param>
+            <param name="group"></param>
+            <param name="files"></param>
+        </member>
+        <member name="M:ClientDependency.Core.BundleManager.OrderFiles(System.Collections.Generic.IList{ClientDependency.Core.IClientDependencyFile})">
+            <summary>
+            This will order the files
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.BundleResult">
+            <summary>
+            Is returned when resolving a bundle
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.IVirtualFileWriter.WriteToStream(ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider,System.IO.StreamWriter,ClientDependency.Core.CompositeFiles.IVirtualFile,ClientDependency.Core.ClientDependencyType,System.String,System.Web.HttpContextBase)">
+            <summary>
+            writes the file to the stream and returns true if it was successful, false if not successful
+            </summary>
+            <param name="provider"></param>
+            <param name="sw"></param>
+            <param name="vf"></param>
+            <param name="type"></param>
+            <param name="origUrl"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.UrlTypeDefault">
+            <summary>
+            Defines the UrlType default value, this can be set at startup
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.CompositeFilePathAsString">
+            <summary>
+            The path specified in the config
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.#ctor">
+            <summary>
+            constructor sets defaults
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.PersistCompositeFiles">
+            <summary>
+            Flags whether or not to enable composite file script creation/persistence.
+            Composite file persistence will increase performance in the case of cache turnover or application
+            startup since the files are already combined and compressed.
+            This also allows for the ability to easily clear the cache so the files are refreshed.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.UrlType">
+            <summary>
+            The Url type to use for the dependency handler 
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.PathBasedUrlFormat">
+            <summary>
+            The format of a path based URL (either a MappedId or a Base64Paths URL). The string format is a tokenized string such as:
+            {dependencyId}.{version}.{type} 
+            or
+            {dependencyId}/{version}/{type}
+            </summary>
+            <remarks>
+            By defaut this is just:
+            {dependencyId}.{version}.{type} 
+            but Cassini doesn't support '.' in the URL so some people may want to change this to use '/'
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.CompositeFilePath">
+            <summary>
+            Returns the CompositeFilePath
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.BundleDomains">
+            <summary>
+            Returns the set of white listed domains
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.WritePathToStream(ClientDependency.Core.ClientDependencyType,System.String,System.Web.HttpContextBase,System.IO.StreamWriter)">
+            <summary>
+            Writes a given path to the stream
+            </summary>
+            <param name="type"></param>
+            <param name="path">The path could be a local url or an absolute url</param>
+            <param name="context"></param>
+            <param name="sw"></param>
+            <returns>If successful returns a CompositeFileDefinition, otherwise returns null</returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.WriteFileToStream(System.IO.StreamWriter,System.String,ClientDependency.Core.ClientDependencyType,System.Web.HttpContextBase)">
+            <summary>
+            Writes the output of an external request to the stream
+            </summary>
+            <param name="sw"></param>
+            <param name="url"></param>
+            <param name="type"></param>
+            <param name="http"></param>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.WriteFileToStream(System.IO.StreamWriter,System.IO.FileInfo,ClientDependency.Core.ClientDependencyType,System.String,System.Web.HttpContextBase)">
+            <summary>
+            Writes the output of a local file to the stream
+            </summary>
+            <param name="sw"></param>
+            <param name="fi"></param>
+            <param name="type"></param>
+            <param name="origUrl"></param>
+            <param name="http"></param>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.WriteVirtualFileToStream(System.IO.StreamWriter,ClientDependency.Core.CompositeFiles.IVirtualFile,ClientDependency.Core.CompositeFiles.IVirtualFileWriter,ClientDependency.Core.ClientDependencyType,System.Web.HttpContextBase)">
+            <summary>
+            Writes the output of a local file to the stream
+            </summary>
+            <param name="sw"></param>
+            <param name="vf"></param>
+            <param name="virtualWriter"></param>
+            <param name="type"></param>
+            <param name="http"></param>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.ProcessCompositeList(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},ClientDependency.Core.ClientDependencyType,System.Web.HttpContextBase)">
+            <summary>
+            Returns a URL used to return a compbined/compressed/optimized version of all dependencies.
+            <remarks>
+            The full url with the encoded query strings for the handler which will process the composite list
+            of dependencies. The handler will compbine, compress, minify, and output cache the results
+            on the base64 encoded string.
+            </remarks>        
+            </summary>
+            <param name="dependencies"></param>
+            <param name="type"></param>
+            <param name="http"></param>
+            <returns>An array containing the list of composite file URLs. This will generally only contain 1 value unless
+            the number of files registered exceeds the maximum length, then it will return more than one file.</returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.GetCompositeFileUrls(ClientDependency.Core.ClientDependencyType,ClientDependency.Core.IClientDependencyFile[],System.String,System.Web.HttpContextBase,System.Int32,System.Int32)">
+            <summary>
+            When the path type is one of the base64 paths, this will create the composite file urls for all of the dependencies. 
+            </summary>
+            <param name="type"></param>
+            <param name="dependencies"></param>
+            <param name="compositeFileHandlerPath"></param>
+            <param name="http"></param>
+            <param name="maxLength">the max length each url can be</param>
+            <param name="version">the current cdf version</param>
+            <returns></returns>
+            <remarks>
+            Generally there will only be one path returned but his depends on how many dependencies there are and whether the base64 created path will exceed the max url length parameter.
+            If the string length exceeds it, then we need to creaet multiple paths all of which must be less length than the maximum provided.
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.GetCompositeFileUrl(System.String,ClientDependency.Core.ClientDependencyType,System.Web.HttpContextBase,ClientDependency.Core.CompositeFiles.Providers.CompositeUrlType,System.String,System.Int32)">
+            <summary>
+            Returns the url for the composite file handler for the filePath specified.
+            </summary>
+            <param name="fileKey">The Base64 encoded file paths or the file map key used to lookup the required dependencies</param>
+            <param name="type"></param>
+            <param name="http"></param>
+            <param name="urlType"></param>
+            <param name="compositeFileHandlerPath"> </param>
+            <param name="version"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.MinifyFile(System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Minifies the file
+            </summary>
+            <param name="fileContents"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.ParseCssFilePaths(System.String,ClientDependency.Core.ClientDependencyType,System.String,System.Web.HttpContextBase)">
+            <summary>
+            This ensures that all paths (i.e. images) in a CSS file have their paths change to absolute paths.
+            </summary>
+            <param name="fileContents"></param>
+            <param name="type"></param>
+            <param name="url"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider.TryReadUri(System.String,System.String@,System.Web.HttpContextBase)">
+            <summary>
+            Tries to convert the url to a uri, then read the request into a string and return it.
+            This takes into account relative vs absolute URI's
+            </summary>
+            <param name="url"></param>
+            <param name="requestContents"></param>
+            <param name="http"></param>
+            <returns>true if successful, false if not successful</returns>
+            <remarks>
+            if the path is a relative local path, the we use Server.Execute to get the request output, otherwise
+            if it is an absolute path, a WebClient request is made to fetch the contents.
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseFileMapProvider.GetCompositeFile(System.String,System.Int32,System.String)">
+            <summary>
+            Retreives the file map for the key/version/compression type specified
+            </summary>
+            <param name="fileKey"></param>
+            <param name="version"></param>
+            <param name="compression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseFileMapProvider.GetDependentFiles(System.String,System.Int32)">
+            <summary>
+            Retreives the dependent file paths for the filekey/version (regardless of compression)
+            </summary>
+            <param name="fileKey"></param>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseFileMapProvider.CreateUpdateMap(System.String,System.String,System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.String,System.Int32)">
+            <summary>
+            Creates a map for the version/compression type/dependent file listing
+            </summary>
+            <param name="fileKey"></param>
+            <param name="compressionType"></param>
+            <param name="dependentFiles"></param>
+            <param name="compositeFile"></param>
+            <param name="version"></param>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseFileMapProvider.CreateNewMap(System.Web.HttpContextBase,System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Int32)">
+            <summary>
+            Creates a new file map and file key for the dependent file list, this is used to create URLs with CompositeUrlType.MappedId 
+            </summary>       
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.BaseFileMapProvider.Initialize(System.Web.HttpContextBase)">
+            <summary>
+            Runs initialization with an Http context, this occurs after the initial provider config initialization
+            </summary>
+            <param name="http"></param>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.Providers.CompositeUrlType.Base64QueryStrings">
+            <summary>
+            The original URL type in which full dependency paths are base64 encoded as query strings
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.Providers.CompositeUrlType.Base64Paths">
+            <summary>
+            Creates a URL in which the full dependency paths are base64 encoded as URL paths, however because
+            paths can get quite large, this requires that .Net 4 is running and that you increase the maxUrlLength
+            configuration property in the httpRuntime section in your web.config
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.Providers.CompositeUrlType.MappedId">
+            <summary>
+            Uses the file map provider to store and map the dependency paths with a reference to an ID it generates
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.PathBasedUrlFormatter.CreatePath(System.String,System.String,ClientDependency.Core.ClientDependencyType,System.Int32)">
+            <summary>
+            Creates a path based on the format, fileKey, type and version specified.
+            </summary>
+            <param name="pathBasedUrlFormat"></param>
+            <param name="fileKey"></param>
+            <param name="type"></param>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.PathBasedUrlFormatter.Validate(System.String)">
+            <summary>
+            Ensures the url format is valid, if not an exception is thrown
+            </summary>
+            <param name="pathBasedUrl"></param>
+        </member>
+        <member name="T:ClientDependency.Core.CompositeFiles.Providers.CompositeFileProcessingProvider">
+            <summary>
+            A provider for combining, minifying, compressing and saving composite scripts/css files
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.CompositeFileProcessingProvider.SaveCompositeFile(System.Byte[],ClientDependency.Core.ClientDependencyType,System.Web.HttpServerUtilityBase)">
+            <summary>
+            Saves the file's bytes to disk with a hash of the byte array
+            </summary>
+            <param name="fileContents"></param>
+            <param name="type"></param>
+            <param name="server"></param>
+            <returns>The new file path</returns>
+            <remarks>
+            the extension will be: .cdj for JavaScript and .cdc for CSS
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.CompositeFileProcessingProvider.CombineFiles(System.String[],System.Web.HttpContextBase,ClientDependency.Core.ClientDependencyType,System.Collections.Generic.List{ClientDependency.Core.CompositeFiles.CompositeFileDefinition}@)">
+            <summary>
+            combines all files to a byte array
+            </summary>
+            <param name="filePaths"></param>
+            <param name="context"></param>
+            <param name="type"></param>
+            <param name="fileDefs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.CompositeFileProcessingProvider.CompressBytes(ClientDependency.Core.CompressionType,System.Byte[])">
+            <summary>
+            Compresses the bytes if the browser supports it
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.CompositeFileProcessingProvider.WriteFileToStream(System.IO.StreamWriter@,System.String,ClientDependency.Core.ClientDependencyType,System.Collections.Generic.List{ClientDependency.Core.CompositeFiles.CompositeFileDefinition}@,System.Web.HttpContextBase)">
+            <summary>
+            Writes the output of an external request to the stream
+            </summary>
+            <param name="sw"></param>
+            <param name="url"></param>
+            <param name="type"></param>
+            <param name="fileDefs"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.CompositeFileProcessingProvider.WriteFileToStream(System.IO.StreamWriter@,System.IO.FileInfo,ClientDependency.Core.ClientDependencyType,System.String,System.Collections.Generic.List{ClientDependency.Core.CompositeFiles.CompositeFileDefinition}@,System.Web.HttpContextBase)">
+            <summary>
+             Writes the output of a local file to the stream
+            </summary>
+            <param name="sw"></param>
+            <param name="fi"></param>
+            <param name="type"></param>
+            <param name="origUrl"></param>
+            <param name="fileDefs"></param>
+            <param name="http"></param>
+        </member>
+        <member name="T:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper">
+            <summary>
+            Creates an XML file to map a saved composite file to the URL requested for the 
+            dependency handler. 
+            This is used in order to determine which individual files are dependant on what composite file so 
+            a user can remove it to clear the cache, and also if the cache expires but the file still exists
+            this allows the system to simply read the one file again instead of compiling all of the other files
+            into one again.
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.FileMapVirtualFolder">
+            <summary>
+            Specifies the default folder to store the file map in, this allows for dynamically changing the folder on startup
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the provider, loads in the existing file contents. If the file doesn't exist, it creates one.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.GetCompositeFile(System.String,System.Int32,System.String)">
+            <summary>
+            Returns the composite file map associated with the file key, the version and the compression type
+            </summary>
+            <param name="fileKey"></param>
+            <param name="version"></param>
+            <param name="compression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.GetDependentFiles(System.String,System.Int32)">
+            <summary>
+            Retreives the dependent file paths for the filekey/version (regardless of compression)
+            </summary>
+            <param name="fileKey"></param>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.CreateNewMap(System.Web.HttpContextBase,System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Int32)">
+             <summary>
+             Creates a new file map and file key for the dependent file list, this is used to create URLs with CompositeUrlType.MappedId 
+             </summary>
+            <example>
+             <![CDATA[
+             <map>
+            		<item key="123xsy" 
+            			file=""
+            			compresion="deflate"
+                     version="1234">
+            			<files>
+            				<file name="C:\asdf\JS\jquery.js" />
+            				<file name="C:\asdf\JS\jquery.ui.js" />		
+            			</files>
+            		</item>
+             </map>
+             ]]>
+             </example>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.CreateUpdateMap(System.String,System.String,System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.String,System.Int32)">
+             <summary>
+             Adds/Updates an entry to the file map with the key specified, the version and dependent files listed with a map
+             to the composite file created for the files.
+             </summary>
+             <param name="fileKey"></param>
+            <param name="compressionType"></param>
+            <param name="dependentFiles"></param>
+             <param name="compositeFile"></param>
+            <param name="version"></param>
+            <example>
+             <![CDATA[
+             <map>
+            		<item key="XSDFSDKJHLKSDIOUEYWCDCDSDOIUPOIUEROIJDSFHG" 
+            			file="C:\asdf\App_Data\ClientDependency\123456.cdj"
+            			compresion="deflate"
+                     version="1234">
+            			<files>
+            				<file name="C:\asdf\JS\jquery.js" />
+            				<file name="C:\asdf\JS\jquery.ui.js" />		
+            			</files>
+            		</item>
+             </map>
+             ]]>
+             </example>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.FindItem(System.String,System.Int32,System.String)">
+            <summary>
+            Finds an element in the map matching the key and version/compression
+            </summary>
+            <param name="key"></param>
+            <param name="version"></param>
+            <param name="compression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.FindItem(System.String,System.Int32)">
+            <summary>
+            Finds a element in the map matching key/version
+            </summary>
+            <param name="key"></param>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.Providers.XmlFileMapper.GetXmlMapPath">
+            <summary>
+            Returns the full path the map xml file for the current machine and install folder.
+            </summary>
+            <remarks>
+            We need to create the map based on the combination of both machine name and install folder because
+            this deals with issues for load balanced environments and file locking and also 
+            deals with issues when the ClientDependency folder is deployed between environments
+            since you would want your staging ClientDependencies in your live and vice versa.
+            This is however based on the theory that each website you have will have a unique combination
+            of folder path and machine name.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.CompositeFiles.CompositeFileDefinition">
+            <summary>
+            A simple class defining a Uri string and whether or not it is a local application file
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.CompositeFileDefinition.GetHashCode">
+            <summary>
+            overrides hash code to ensure that it is unique per machine
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.CompositeFiles.DefaultFileWriter">
+            <summary>
+            The default file local file writer in CDF
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.DefaultFileWriter.WriteContentToStream(ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider,System.IO.StreamWriter,System.String,ClientDependency.Core.ClientDependencyType,System.Web.HttpContextBase,System.String)">
+            <summary>
+            Writes the actual contents of a file or request result to the stream and ensures the contents are minified if necessary
+            </summary>
+            <param name="provider"></param>
+            <param name="sw"></param>
+            <param name="content"></param>
+            <param name="type"></param>
+            <param name="context"></param>
+            <param name="originalUrl">The original Url that the content is related to</param>
+        </member>
+        <member name="T:ClientDependency.Core.CompositeFiles.IFileWriter">
+            <summary>
+            An interface defining a file writer for a local file
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.IFileWriter.WriteToStream(ClientDependency.Core.CompositeFiles.Providers.BaseCompositeFileProcessingProvider,System.IO.StreamWriter,System.IO.FileInfo,ClientDependency.Core.ClientDependencyType,System.String,System.Web.HttpContextBase)">
+            <summary>
+            writes the file to the stream and returns true if it was successful, false if not successful
+            </summary>
+            <param name="provider"></param>
+            <param name="sw"></param>
+            <param name="fi"></param>
+            <param name="type"></param>
+            <param name="origUrl"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.CompositeFiles.CompositeFileMap">
+            <summary>
+            Deserialized structure of the XML stored in the map file
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.CompositeFileMap.HasFileBytes">
+            <summary>
+            If for some reason the file doesn't exist any more or we cannot read the file, this will return false.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.CompositeFileMap.GetCompositeFileBytes">
+            <summary>
+            Returns the file's bytes
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.MaxHandlerUrlLength">
+            <summary>
+            When building composite includes, it creates a Base64 encoded string of all of the combined dependency file paths
+            for a given composite group. If this group contains too many files, then the file path with the query string will be very long.
+            This is the maximum allowed number of characters that there is allowed, otherwise an exception is thrown.
+            </summary>
+            <remarks>
+            If this handler path needs to change, it can be changed by setting it in the global.asax on application start
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.System#Web#IHttpHandler#IsReusable">
+            <summary>
+            Re-usable is true, this is a thread safe class
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.SetCaching(System.Web.HttpContextBase,System.String,System.String,ClientDependency.Core.CompressionType,ClientDependency.Core.CompositeFiles.CompositeDependencyHandler.OutputCachedPage)">
+            <summary>
+            Sets the output cache parameters and also the client side caching parameters
+            </summary>
+            <param name="context"></param>
+            <param name="fileName">The name of the file that has been saved to disk</param>
+            <param name="fileset">The Base64 encoded string supplied in the query string for the handler</param>
+            <param name="compressionType"></param>
+            <param name="page">The outputcache page - ensures server side output cache is stored</param>
+        </member>
+        <member name="F:ClientDependency.Core.Config.DnnConfiguration.UpgradeStatus.Upgrade">
+            <summary>
+            The application need update to a higher version.
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Config.DnnConfiguration.UpgradeStatus.Install">
+            <summary>
+            The application need to install itself.
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Config.DnnConfiguration.UpgradeStatus.None">
+            <summary>
+            The application is normal running.
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Config.DnnConfiguration.UpgradeStatus.Error">
+            <summary>
+            The application occur error when running.
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Config.DnnConfiguration.UpgradeStatus.Unknown">
+            <summary>
+            The application status is unknown,
+            </summary>
+            <remarks>This status should never be returned. its is only used as a flag that Status hasn't been determined.</remarks>
+        </member>
+        <member name="P:ClientDependency.Core.Config.RogueFileCompressionElement.JsRequestExtension">
+            <summary>
+            a collection of file extensions that must match on the rogue file for it to 
+            be replaced with the composite handler
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.RogueFileCompressionElement.CssRequestExtension">
+            <summary>
+            a collection of file extensions that must match on the rogue file for it to 
+            be replaced with the composite handler
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.CompositeFileSection.FileProcessingProviders">
+            <summary>
+            All of the file processing providers registered
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.CompositeFileSection.FileMapProviders">
+            <summary>
+            All of the File map providers registered
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.CompositeFileSection.DefaultFileProcessingProvider">
+            <summary>
+            The default File processing provider
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.CompositeFileSection.DefaultFileMapProvider">
+            <summary>
+            The default file map provider
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Config.ClientDependencySettings._settings">
+            <summary>
+            used for singleton
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Config.ClientDependencySettings.#ctor">
+            <summary>
+            Default constructor for use with the Singletone instance with a web context app
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Config.ClientDependencySettings.#ctor(System.IO.FileSystemInfo,System.Web.HttpContextBase)">
+            <summary>
+            Generally for unit testing when not using the singleton instance
+            </summary>
+            <param name="configFile"></param>
+            <param name="ctx"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Config.ClientDependencySettings.#ctor(ClientDependency.Core.Config.ClientDependencySection,System.Web.HttpContextBase)">
+            <summary>
+            Generally for unit testing when not using the singleton instance
+            </summary>
+            <param name="section"></param>
+            <param name="ctx"></param>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.Instance">
+            <summary>
+            Singleton, used for web apps
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.FileBasedDependencyExtensionList">
+            <summary>
+            The file extensions of Client Dependencies that are file based as opposed to request based.
+            Any file that doesn't have the extensions listed here will be request based, request based is
+            more overhead for the server to process.
+            </summary>
+            <example>
+            A request based JavaScript file may be  a .ashx that dynamically creates JavaScript server side.
+            </example>
+            <remarks>
+            If this is not explicitly set, then the extensions 'js' and 'css' are the defaults.
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.AllowOnlyFipsAlgorithms">
+            <summary>
+            Indicates whether CDF should enforce the policy to create only Federal Information Processing Standard (FIPS) certified algorithms.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.Version">
+            <summary>
+            Gets/sets the file version
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.DefaultMvcRenderer">
+            <summary>
+            Returns the default MVC renderer
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.MvcRendererCollection">
+            <summary>
+            Returns the MVC renderer provider collection
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.DefaultFileRegistrationProvider">
+            <summary>
+            Returns the default file registration provider
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.FileRegistrationProviderCollection">
+            <summary>
+            Returns the file registration provider collection
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.DefaultCompositeFileProcessingProvider">
+            <summary>
+            Returns the default composite file processing provider
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.CompositeFileProcessingProviderCollection">
+            <summary>
+            Returns the composite file processing provider collection
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.DefaultFileMapProvider">
+            <summary>
+            Returns the default file map provider
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySettings.FileMapProviderCollection">
+            <summary>
+            Returns the collection of file map providers
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySection.Version">
+            <summary>
+            Set the version for the files, this will reset all composite file caching, and if
+            composite files are disabled will add a query string to each request so that 
+            any client side cached files will be re-downloaded.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySection.MachineName">
+            <summary>
+            explicitly sets the machine name if it cannot be resolved
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySection.Filters">
+            <summary>
+            Not really supposed to be used by public, but can implement at your own risk!
+            This by default assigns the MvcFilter and RogueFileFilter.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySection.FileBasedDepdendenyExtensions">
+            <summary>
+            The configuration section to set the FileBasedDependencyExtensionList. This is a comma separated list.
+            </summary>
+            <remarks>
+            If this is not explicitly set, then the extensions 'js' and 'css' are the defaults.
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySection.AllowOnlyFipsAlgorithms">
+            <summary>
+            Indicates whether CDF should enforce the policy to create only Federal Information Processing Standard (FIPS) certified algorithms.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Config.ClientDependencySection.FileBasedDependencyExtensionList">
+            <summary>
+            The file extensions of Client Dependencies that are file based as opposed to request based.
+            Any file that doesn't have the extensions listed here will be request based, request based is
+            more overhead for the server to process.
+            </summary>
+            <example>
+            A request based JavaScript file may be  a .ashx that dynamically creates JavaScript server side.
+            Or an asmx/js request based on the proxied javascript created by web services.
+            </example>
+            <remarks>
+            If this is not explicitly set, then the extensions 'js' and 'css' are the defaults.
+            </remarks>
+        </member>
+        <member name="F:ClientDependency.Core.Constants.DefaultPriority">
+            <summary>
+            If a priority is not set, the default will be 100.
+            </summary>
+            <remarks>
+            This will generally mean that if a developer doesn't specify a priority it will come after all other dependencies that 
+            have unless the priority is explicitly set above 100.
+            </remarks>
+        </member>
+        <member name="F:ClientDependency.Core.Constants.DefaultGroup">
+            <summary>
+            If a group is not set, the default will be 100.
+            </summary>
+            <remarks>
+            Unless a group is specified, all dependencies will go into the same, default, group.
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.Controls.CssFolderInclude">
+            <summary>
+            A control used to specify a Css folder dependency
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.DependencyFolderInclude.FileSearchPattern">
+            <summary>
+            Gets/sets the search pattern for css files
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.DependencyFolderInclude.HtmlAttributesAsString">
+            <summary>
+            Used to set the HtmlAttributes on this class via a string which is parsed
+            </summary>
+            <remarks>
+            The syntax for the string must be: key1:value1,key2:value2   etc...
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.Controls.JsFolderInclude">
+            <summary>
+            A control used to specify a Js folder dependency
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.Name">
+            <summary>Name of the script (e.g. <c>jQuery</c>, <c>Bootstrap</c>, <c>Angular</c>, etc.</summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.Version">
+            <summary>Version of this resource if it is a named resources. Note this field is only used when <see cref="P:ClientDependency.Core.Controls.ClientDependencyInclude.Name" /> is specified</summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.ForceVersion">
+            <summary>Force this version to be used. Meant for skin designers that wish to override choices made by module developers or the framework.</summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.ForceProvider">
+            <summary>This can be empty and will use default provider</summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.ForceBundle">
+            <summary>
+            If the resources is an external resource then normally it will be rendered as it's own download unless
+            this is set to true. In that case the system will download the external resource and include it in the local bundle.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.HtmlAttributes">
+            <summary>Used to store additional attributes in the HTML markup for the item</summary>
+            <remarks>Mostly used for CSS Media, but could be for anything</remarks>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyInclude.HtmlAttributesAsString">
+            <summary>Used to set the HtmlAttributes on this class via a string which is parsed</summary>
+            <remarks>The syntax for the string must be: <c>key1:value1,key2:value2</c> etc.</remarks>
+        </member>
+        <member name="T:ClientDependency.Core.Controls.CssInclude">
+            <summary>
+            A control used to add a Css file dependency
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.Controls.ClientDependencyLoader">
+            <summary>
+            This is the master control for loading in dependencies in web forms
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.#ctor">
+            <summary>
+            Constructor sets the defaults.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.GetInstance(System.Web.HttpContextBase)">
+            <summary>
+            Singleton per request instance.
+            </summary>
+            <exception cref="T:System.NullReferenceException">
+            If no ClientDependencyLoader control exists on the current page, an exception is thrown.
+            </exception>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.CreateChildControls">
+            <summary>
+            Need to set the container for each of the paths to support databinding.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.OnDataBinding(System.EventArgs)">
+            <summary>
+            Need to bind all children paths.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.OnPreRender(System.EventArgs)">
+            <summary>
+            Finds all dependencies on the page and renders them
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.TryCreate(System.Web.UI.Control,System.Web.HttpContextBase,System.Boolean@)">
+            <summary>
+            Checks if a loader already exists, if it does, it returns it, otherwise it will
+            create a new one in the control specified.
+            isNew will be true if a loader was created, otherwise false if it already existed.
+            </summary>
+            <param name="parent"></param>
+            <param name="http"></param>
+            <param name="isNew"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Registers a file dependency
+            </summary>
+            <param name="filePath"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.Int32,System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Registers a file dependency
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.Int32,System.Int32,System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Registers a file dependency
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.Int32,System.String,System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Registers a file dependency
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.Int32,System.Int32,System.String,System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Registers a file dependency
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.Int32,System.Int32,System.String,System.String,ClientDependency.Core.ClientDependencyType,System.String)">
+            <summary>
+            Registers a file dependency
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.Int32,System.Int32,System.String,System.String,ClientDependency.Core.ClientDependencyType,System.Object,System.String)">
+            <summary>
+            Registers a file dependency
+            </summary>
+            <param name="group"></param>
+            <param name="priority"></param>
+            <param name="filePath"></param>
+            <param name="pathNameAlias"></param>
+            <param name="type"></param>
+            <param name="htmlAttributes"></param>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterDependency(System.String,System.String,ClientDependency.Core.ClientDependencyType)">
+            <summary>
+            Registers a file dependency 
+            </summary>
+            <param name="filePath"></param>
+            <param name="pathNameAlias"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.AddPath(System.String,System.String)">
+            <summary>
+            Adds a path to the current loader
+            </summary>
+            <param name="pathNameAlias"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.AddPath(ClientDependency.Core.IClientDependencyPath)">
+            <summary>
+            Adds a path to the current loader
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterClientDependencies(System.Web.UI.Control,ClientDependency.Core.Controls.ClientDependencyPathCollection)">
+            <summary>
+            Registers dependencies
+            </summary>
+            <param name="control"></param>
+            <param name="paths"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterClientDependencies(System.String,System.Web.UI.Control,System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyPath})">
+            <summary>
+            Registers dependencies with the provider name specified
+            </summary>
+            <param name="providerName"></param>
+            <param name="control"></param>
+            <param name="paths"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.RegisterClientDependencies``1(System.Web.UI.Control,System.Collections.Generic.List{ClientDependency.Core.IClientDependencyPath})">
+            <summary>
+            Registers dependencies with the provider specified by T
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Controls.ClientDependencyLoader.FindDependencies(System.Web.UI.Control)">
+            <summary>
+            Find all dependencies of this control and it's entire child control heirarchy.
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.Controls.ClientDependencyPath">
+            <summary>
+            A path object for the client dependency loader. Used to specify all of the base paths (name and path) to 
+            be used with the client dependencies.
+            Databinding support has been enabled.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Controls.ClientDependencyPath.Parent">
+            <summary>
+            This is set at runtime to set the load for this path object. this is required for databinding.
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.CssFile">
+            <summary>
+            Represents a CSS file
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.CssHelper.ParseImportStatements(System.String,System.Collections.Generic.IEnumerable{System.String}@)">
+            <summary>
+            Returns the paths for the import statements and the resultant original css without the import statements
+            </summary>
+            <param name="content">The original css contents</param>
+            <param name="importedPaths"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CssHelper.ReplaceUrlsWithAbsolutePaths(System.String,System.String,System.Web.HttpContextBase)">
+            <summary>
+            Returns the CSS file with all of the url's formatted to be absolute locations
+            </summary>
+            <param name="fileContents"></param>
+            <param name="url"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CssHelper.ReplaceUrlsWithAbsolutePaths(System.String,System.Uri)">
+            <summary>
+            Returns the CSS file with all of the url's formatted to be absolute locations
+            </summary>
+            <param name="fileContent">content of the css file</param>
+            <param name="cssLocation">the uri location of the css file</param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.CssHelper.MinifyCss(System.String)">
+            <summary>
+            Minifies Css
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.DependencyHtmlElement">
+            <summary>
+             A simple model defining the source of the dependency and the Html Elements that need to be rendered as part of the html tag
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.DependencySorter">
+            <summary>
+            Utility for sorting dependencies based on their priority and the index in which they exist in the list (# they were added)
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.DependencySorter.SortItems(System.Collections.Generic.IList{ClientDependency.Core.IClientDependencyFile})">
+            <summary>
+            Sort the items by their priority and their index they currently exist in the collection
+            </summary>
+            <param name="files"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.DictionaryExtensions.ToHtmlAttributes(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Returns the dictionary as formatted html attributes for use in an html tag
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.DictionaryExtensions.IsEqualTo(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Determines if 2 dictionaries contain the exact same keys/values
+            </summary>
+            <param name="d"></param>
+            <param name="compareTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.LazyLoadRenderer.PlaceholderParserPlaceholderReplaced(System.Object,ClientDependency.Core.PlaceholderReplacementEventArgs)">
+            <summary>
+            This is used to ensure we render the lazy load script once before either the lazy js or css is rendered. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>
+            See comments in PlaceholdersReplaced for more details
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.LazyLoadRenderer.PlaceholdersReplaced(System.Object,ClientDependency.Core.PlaceholdersReplacedEventArgs)">
+            <summary>
+            This allows us to ensure that the lazy load script is placed higher in the rendered html than either the css or the js rendered to the page.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>
+            TO accomplish this we detect if the http context has a special key (PlaceholderReplacementProcessing), if so we'll replace the first encountered
+            token with the lazy load script and replace any other ones with empty text (so it is only loaded once). We need to do this because we have no 
+            idea if the developer has rendered the lazy css or lazy js first.
+            </remarks>
+        </member>
+        <member name="F:ClientDependency.Core.FileRegistration.Providers.LazyLoadRenderer.DependencyLoaderResourceName">
+            <summary>Path to the dependency loader we need for adding control dependencies.</summary>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.LazyLoadRenderer.GetWebResourceUrl(System.Type,System.String)">
+            <summary>
+            This is silly to have to do this but MS don't give you a way in MVC to do this
+            </summary>
+            <param name="type"></param>
+            <param name="resourceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.LazyLoadRenderer.RenderJsDependencies(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Web.HttpContextBase,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Renders many Js dependencies.
+            </summary>
+            <param name="jsDependencies"></param>
+            <param name="http"></param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.LazyLoadRenderer.RenderCssDependencies(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Web.HttpContextBase,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Renders many Css dependencies. 
+            </summary>
+            <param name="cssDependencies"></param>
+            <param name="http"></param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.FileRegistration.Providers.PlaceHolderProvider">
+            <summary>
+            Uses PlaceHolder controls to render the CSS and JavaScript
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.PlaceHolderProvider.RegisterDependencies(System.Web.HttpContextBase,System.String,System.String)">
+            <summary>
+            Registers the dependencies as controls of the placeholder controls specified
+            </summary>
+            <param name="http"></param>
+            <param name="js"></param>
+            <param name="css"></param>
+            <remarks>
+            For some reason ampersands that aren't html escaped are not compliant to HTML standards when they exist in 'link' or 'script' tags in URLs,
+            we need to replace the ampersands with &amp; . This is only required for this one w3c compliancy, the URL itself is a valid URL.
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.StandardRenderer.RegisterDependencies(System.Collections.Generic.List{ClientDependency.Core.IClientDependencyFile},System.Collections.Generic.HashSet{ClientDependency.Core.IClientDependencyPath},System.String@,System.String@,System.Web.HttpContextBase)">
+            <summary>
+            Override because we need to ensure the &amp; is replaced with &amp; This is only required for this one w3c compliancy, the URL itself is a valid URL.
+            </summary>
+            <param name="allDependencies"></param>
+            <param name="paths"></param>
+            <param name="jsOutput"></param>
+            <param name="cssOutput"></param>
+            <param name="http"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.WebFormsFileRegistrationProvider.RegisterDependencies(System.Web.HttpContextBase,System.String,System.String)">
+            <summary>
+            Called to register the js and css into the page/control/output.
+            </summary>
+            <param name="http"></param>
+            <param name="js"></param>
+            <param name="css"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.WebFormsFileRegistrationProvider.RegisterDependencies(System.Web.UI.Control,System.Collections.Generic.List{ClientDependency.Core.IClientDependencyFile},System.Collections.Generic.HashSet{ClientDependency.Core.IClientDependencyPath},System.Web.HttpContextBase)">
+            <summary>
+            Called to register the dependencies into the page/control/output
+            </summary>
+            <param name="dependantControl"></param>
+            <param name="allDependencies"></param>
+            <param name="paths"></param>
+            <param name="http"></param>
+        </member>
+        <member name="T:ClientDependency.Core.FileRegistration.Providers.LoaderControlProvider">
+            <summary>
+            Uses the LoaderControl to render the CSS and JS specified.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.LoaderControlProvider.RegisterDependencies(System.Web.HttpContextBase,System.String,System.String)">
+            <summary>
+            Registers the dependencies as controls of the LoaderControl controls collection
+            </summary>
+            <param name="http"></param>
+            <param name="js"></param>
+            <param name="css"></param>
+            <remarks>
+            For some reason ampersands that aren't html escaped are not compliant to HTML standards when they exist in 'link' or 'script' tags in URLs,
+            we need to replace the ampersands with &amp; . This is only required for this one w3c compliancy, the URL itself is a valid URL.
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.#ctor">
+            <summary>
+            Constructor sets defaults
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.EnableCompositeFiles">
+            <summary>
+            By default this is true but can be overriden (in either config or code). 
+            Composite files are never enabled with compilation debug="true" however.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.EnableDebugVersionQueryString">
+            <summary>
+            By default this is true but can be disabled (in either config or code). When this
+            is enabled a query string like ?cdv=1235 of the current CDF version will be appended
+            to dependencies when debugging is enabled or when composite files are disabled
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.RenderJsDependencies(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Web.HttpContextBase,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            This is called when rendering many js dependencies
+            </summary>
+            <param name="jsDependencies"></param>
+            <param name="http"></param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.RenderCssDependencies(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Web.HttpContextBase,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            This is called when rendering many css dependencies
+            </summary>
+            <param name="cssDependencies"></param>
+            <param name="http"></param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.RenderSingleJsFile(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Called to render a single js file
+            </summary>
+            <param name="js"></param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.RenderSingleCssFile(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Called to render a single css file
+            </summary>
+            <param name="css"></param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.WriteStaggeredDependencies(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Web.HttpContextBase,System.Text.StringBuilder,System.Func{System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Web.HttpContextBase,System.Collections.Generic.IDictionary{System.String,System.String},System.String},System.Func{System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String})">
+            <summary>
+            Because we can have both internal and external dependencies rendered, we need to stagger the script tag output... if they are external, we need to stop the compressing/combining
+            and write out the external dependency, then resume the compressing/combining handler.
+            </summary>
+            <param name="dependencies"></param>
+            <param name="http"></param>
+            <param name="builder"></param>
+            <param name="renderCompositeFiles"></param>
+            <param name="renderSingle"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.UpdateFilePaths(System.Collections.Generic.IEnumerable{ClientDependency.Core.IClientDependencyFile},System.Collections.Generic.HashSet{ClientDependency.Core.IClientDependencyPath},System.Web.HttpContextBase)">
+            <summary>
+            Ensures the correctly resolved file path is set for each dependency (i.e. so that ~ are taken care of) and also
+            prefixes the file path with the correct base path specified for the PathNameAlias if specified.
+            </summary>
+            <param name="dependencies">The dependencies list for which file paths will be updated</param>
+            <param name="folderPaths"></param>
+            <param name="http"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.EnsureNoDuplicates(System.Collections.Generic.List{ClientDependency.Core.IClientDependencyFile},System.Collections.Generic.HashSet{ClientDependency.Core.IClientDependencyPath})">
+            <summary>
+            This will ensure that no duplicates have made it into the collection.
+            Duplicates WILL occur if the same dependency is registered in 2 different ways: 
+            one with a global path and one with a full path. This is because paths may not be defined
+            until we render so we cannot de-duplicate at the time of registration.
+            De-duplication will remove the dependency with a lower priority or later in the list.
+            This also must be called after UpdatePaths are called since we need to full path filled in.
+            </summary>
+            <param name="dependencies">The dependencies list for which duplicates will be removed</param>
+            <param name="folderPaths"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.GetHtmlAttributes(ClientDependency.Core.IClientDependencyFile)">
+            <summary>
+            Checks if the current file implements the html attribute interfaces and returns the appropriate html attributes
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.BaseFileRegistrationProvider.WriteDependencies(System.Collections.Generic.List{ClientDependency.Core.IClientDependencyFile},System.Collections.Generic.HashSet{ClientDependency.Core.IClientDependencyPath},System.String@,System.String@,System.Web.HttpContextBase)">
+            <summary>
+            Called to write the js and css to string output
+            </summary>
+            <param name="allDependencies"></param>
+            <param name="paths"></param>
+            <param name="jsOutput"></param>
+            <param name="cssOutput"></param>
+            <param name="http"></param>
+        </member>
+        <member name="F:ClientDependency.Core.FileRegistration.Providers.LazyLoadProvider.DependencyLoaderResourceName">
+            <summary>Path to the dependency loader we need for adding control dependencies.</summary>
+        </member>
+        <member name="M:ClientDependency.Core.FileRegistration.Providers.PageHeaderProvider.RegisterDependencies(System.Web.HttpContextBase,System.String,System.String)">
+            <summary>
+            Registers the dependencies in the page header
+            </summary>
+            <param name="http"></param>
+            <param name="js"></param>
+            <param name="css"></param>
+            <remarks>
+            For some reason ampersands that aren't html escaped are not compliant to HTML standards when they exist in 'link' or 'script' tags in URLs,
+            we need to replace the ampersands with &amp; . This is only required for this one w3c compliancy, the URL itself is a valid URL.
+            
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.FileWriters">
+            <summary>
+            Defines the file writers for file extensions or for explicit file paths
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.GetDefault">
+            <summary>
+            Returns the default writer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.GetRegisteredExtensions">
+            <summary>
+            returns all extensions that have been registered
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.AddWriterForExtension(System.String,ClientDependency.Core.CompositeFiles.IVirtualFileWriter)">
+            <summary>
+            This will add or update a writer for a specific file extension
+            </summary>
+            <param name="fileExtension"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.GetVirtualWriterForExtension(System.String)">
+            <summary>
+            Returns the writer for the file extension, if none is found then the null will be returned
+            </summary>
+            <param name="fileExtension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.AddWriterForFile(System.String,ClientDependency.Core.CompositeFiles.IVirtualFileWriter)">
+            <summary>
+            This will add or update a writer for a specific file
+            </summary>
+            <param name="filePath"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.GetVirtualWriterForFile(System.String)">
+            <summary>
+            Returns the writer for the file path, if none is found then the null will be returned
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.AddWriterForExtension(System.String,ClientDependency.Core.CompositeFiles.IFileWriter)">
+            <summary>
+            This will add or update a writer for a specific file extension
+            </summary>
+            <param name="fileExtension"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.GetWriterForExtension(System.String)">
+            <summary>
+            Returns the writer for the file extension, if none is found then the default writer will be returned
+            </summary>
+            <param name="fileExtension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.AddWriterForFile(System.String,ClientDependency.Core.CompositeFiles.IFileWriter)">
+            <summary>
+            This will add or update a writer for a specific file
+            </summary>
+            <param name="filePath"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:ClientDependency.Core.FileWriters.GetWriterForFile(System.String)">
+            <summary>
+            Returns the writer for the file path, if none is found then the default writer will be returned
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.HashCodeCombiner">
+            <summary>
+            Used to create a hash code from multiple objects.
+            </summary>
+            <remarks>
+            .Net has a class the same as this: System.Web.Util.HashCodeCombiner and of course it works for all sorts of things
+            which we've not included here as we just need a quick easy class for this in order to create a unique
+            hash of directories/files to see if they have changed.
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.HashCodeCombiner.GetCombinedHashCode">
+            <summary>
+            Returns the hex code of the combined hash code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.HttpContextBaseExtensions">
+            <summary>
+            Extension methods for the HttpContext object
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.HttpContextBaseExtensions.GetRawUrlSafe(System.Web.HttpContextBase)">
+            <summary>
+            We are not running .Net 4.5 which has a Request.Unvalidated property so that we don't have to deal with
+            HttpRequestValidationException but in our case we need to deal with it. Luckily we don't want to deal with 
+            invalidated RawUrl's so we'll just catch the exception and return null
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.HttpContextBaseExtensions.SetClientCachingResponse(System.Web.HttpContextBase,System.String,System.Int32,System.String[])">
+            <summary>
+            This sets the caching response to the client including custom e-tag headers
+            </summary>
+            <param name="context"></param>
+            <param name="etag">Specify the e-tag to use - this should be consistent with this file</param>
+            <param name="fromDays">default is 10</param>
+            <param name="varyByParams">A list of cache parameter names to vary-by</param>
+        </member>
+        <member name="M:ClientDependency.Core.HttpContextBaseExtensions.GetClientCompression(System.Web.HttpContextBase)">
+            <summary>
+            Check what kind of compression to use. Need to select the first available compression 
+            from the header value as this is how .Net performs caching by compression so we need to follow
+            this process.
+            If IE 6 is detected, we will ignore compression as it's known that some versions of IE 6
+            have issues with it.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.HttpContextBaseExtensions.IsAbsolute(System.Web.HttpContextBase,System.String)">
+            <summary>
+            Checks for absolute path to root of the website.
+            </summary>
+            <remarks>
+            This was taken from the mono source so should be accurate.
+            The reason we're not using the VirtualPathUtility one is because it has bugs in 3.5 whereas
+            if the path has query strings, it throws exceptions.
+            </remarks>
+            <param name="context"></param>
+            <param name="virtualPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.HttpContextBaseExtensions.ResolveUrl(System.Web.HttpContextBase,System.String)">
+            <summary>
+            Returns a site relative HTTP path from a partial path starting out with a ~.
+            Same syntax that ASP.Net internally supports but this method can be used
+            outside of the Page framework.
+            
+            Works like Control.ResolveUrl including support for ~ syntax
+            but returns an absolute URL.
+            </summary>
+            <param name="context"></param>
+            <param name="originalUrl">Any Url including those starting with ~</param>
+            <returns>relative url</returns>
+        </member>
+        <member name="M:ClientDependency.Core.HttpContextBaseExtensions.IsAbsolutePath(System.Web.HttpContextBase,System.String)">
+            <summary>
+            Checks for an absolute http path
+            </summary>
+            <remarks>
+            Takes into account this type of url:
+            ~/pathtoresolve/page.aspx?returnurl=http://servertoredirect/resource.aspx
+            which is not an absolute path but contains the characters to describe it as one.
+            </remarks>
+            <param name="context"></param>
+            <param name="originalUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.ClientDependencyFileExtensions.ResolveFilePath(ClientDependency.Core.IClientDependencyFile,System.Web.HttpContextBase)">
+            <summary>
+            Resolves an absolute web path for the file path
+            </summary>
+            <param name="file"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.IHaveHtmlAttributes">
+            <summary>
+            interface defining that an object has Html attributes
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.IHaveHtmlAttributes.HtmlAttributes">
+            <summary>
+            Used to store additional attributes in the HTML markup for the item
+            </summary>
+            <remarks>
+            Mostly used for CSS Media, but could be for anything
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.IHttpProvider">
+            <summary>
+            A provider that requires initialization under an Http context.
+            The Http initialization will happen after the standard provider initialization.
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.IRequiresHtmlAttributesParsing">
+            <summary>
+            interface defining that an IClientDependencyFile has html attributes applied as a string which require parsing
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.IRequiresHtmlAttributesParsing.HtmlAttributesAsString">
+            <summary>
+            Used to set the HtmlAttributes on this class via a string which is parsed
+            </summary>
+            <remarks>
+            The syntax for the string must be: key1:value1,key2:value2   etc...
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.JavascriptFile">
+            <summary>
+            Represents a JS file
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.Module.ClientDependencyModule">
+            <summary>
+            This module currently replaces rogue scripts with composite scripts.
+            Eventually it will handle css files and MVC implementation
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ClientDependencyModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)">
+            <summary>
+            Binds the events
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ClientDependencyModule.HandleRequest(System.Object,System.EventArgs)">
+            <summary>
+            Checks if any assigned filters validate the current handler, if so then assigns any filter
+            that CanExecute to the response filter chain.
+            
+            Checks if the request MIME type matches the list of mime types specified in the config,
+            if it does, then it compresses it.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ClientDependencyModule.LoadFilters(System.Web.HttpContextBase)">
+            <summary>
+            loads instances of all registered filters.
+            </summary>
+            <param name="http"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ClientDependencyModule.ValidateCurrentHandler(System.Collections.Generic.IEnumerable{ClientDependency.Core.Module.IFilter})">
+            <summary>
+            Ensure the current running handler is valid in order to proceed with the module filter.
+            </summary>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.Module.ResponseFilterStream">
+            <summary>
+            A semi-generic Stream implementation for Response.Filter with
+            an event interface for handling Content transformations via
+            Stream or String.    
+            <remarks>
+            Use with care for large output as this implementation copies
+            the output into a memory stream and so increases memory usage.
+            </remarks>
+            </summary>    
+        </member>
+        <member name="F:ClientDependency.Core.Module.ResponseFilterStream._stream">
+            <summary>
+            The original stream
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Module.ResponseFilterStream._position">
+            <summary>
+            Current position in the original stream
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Module.ResponseFilterStream._cacheStream">
+            <summary>
+            Stream that original content is read into
+            and then passed to TransformStream function
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.Module.ResponseFilterStream._cachePointer">
+            <summary>
+            Internal pointer that that keeps track of the size
+            of the cacheStream
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.#ctor(System.IO.Stream,System.Web.HttpContextBase)">
+            <summary>
+            
+            </summary>
+            <param name="responseStream"></param>
+            <param name="http"></param>
+        </member>
+        <member name="P:ClientDependency.Core.Module.ResponseFilterStream.IsCaptured">
+            <summary>
+            Determines whether the stream is captured
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Module.ResponseFilterStream.IsOutputDelayed">
+            <summary>
+            Determines whether the Write method is outputting data immediately
+            or delaying output until Flush() is fired.
+            </summary>
+        </member>
+        <member name="E:ClientDependency.Core.Module.ResponseFilterStream.CaptureStream">
+            <summary>
+            Event that captures Response output and makes it available
+            as a MemoryStream instance. Output is captured but won't 
+            affect Response output.
+            </summary>
+        </member>
+        <member name="E:ClientDependency.Core.Module.ResponseFilterStream.CaptureString">
+            <summary>
+            Event that captures Response output and makes it available
+            as a string. Output is captured but won't affect Response output.
+            </summary>
+        </member>
+        <member name="E:ClientDependency.Core.Module.ResponseFilterStream.TransformWrite">
+            <summary>
+            Event that allows you transform the stream as each chunk of
+            the output is written in the Write() operation of the stream.
+            This means that that it's possible/likely that the input 
+            buffer will not contain the full response output but only
+            one of potentially many chunks.
+            
+            This event is called as part of the filter stream's Write() 
+            operation.
+            </summary>
+        </member>
+        <member name="E:ClientDependency.Core.Module.ResponseFilterStream.TransformWriteString">
+            <summary>
+            Event that allows you to transform the response stream as
+            each chunk of bytep[] output is written during the stream's write
+            operation. This means it's possibly/likely that the string
+            passed to the handler only contains a portion of the full
+            output. Typical buffer chunks are around 16k a piece.
+            
+            This event is called as part of the stream's Write operation.
+            </summary>
+        </member>
+        <member name="E:ClientDependency.Core.Module.ResponseFilterStream.TransformStream">
+            <summary>
+            This event allows capturing and transformation of the entire 
+            output stream by caching all write operations and delaying final
+            response output until Flush() is called on the stream.
+            </summary>
+        </member>
+        <member name="E:ClientDependency.Core.Module.ResponseFilterStream.TransformString">
+            <summary>
+            Event that can be hooked up to handle Response.Filter
+            Transformation. Passed a string that you can modify and
+            return back as a return value. The modified content
+            will become the final output.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.OnTransformCompleteString(System.String)">
+            <summary>
+            Allows transforming of strings
+            
+            Note this handler is internal and not meant to be overridden
+            as the TransformString Event has to be hooked up in order
+            for this handler to even fire to avoid the overhead of string
+            conversion on every pass through.
+            </summary>
+            <param name="responseText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.OnTransformCompleteStringInternal(System.IO.MemoryStream)">
+            <summary>
+            Wrapper method form OnTransformString that handles
+            stream to string and vice versa conversions
+            </summary>
+            <param name="ms"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ClientDependency.Core.Module.ResponseFilterStream.CanRead">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Module.ResponseFilterStream.CanWrite">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Module.ResponseFilterStream.Length">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.Module.ResponseFilterStream.Position">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.SetLength(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.Close">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.Flush">
+            <summary>
+            Override flush by writing out the cached stream data
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.ResponseFilterStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Overriden to capture output written by ASP.NET and captured
+            into a cached stream that is written out later when Flush()
+            is called.
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="T:ClientDependency.Core.Module.RogueFileFilter">
+            <summary>
+            Used as an http response filter to modify the contents of the output html.
+            This filter is used to intercept js and css rogue registrations on the html page.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.RogueFileFilter.ValidateCurrentHandler">
+            <summary>
+            This filter can only execute when it's a Page or MvcHandler
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.RogueFileFilter.CanExecute">
+            <summary>
+            Returns true when this filter should be applied
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.RogueFileFilter.UpdateOutputHtml(System.String)">
+            <summary>
+            Replaces any rogue script tag's with calls to the compression handler instead 
+            of just the script.
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.Module.RogueFileFilter.ReplaceScripts(System.String)">
+            <summary>
+            Replaces all src attribute values for a script tag with their corresponding 
+            URLs as a composite script.
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.RogueFileFilter.ReplaceStyles(System.String)">
+            <summary>
+            Replaces all href attribute values for a link tag with their corresponding 
+            URLs as a composite style.
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.Module.RogueFileFilter.ReplaceContent(System.String,System.String,System.String[],ClientDependency.Core.ClientDependencyType,System.String,System.Web.HttpContextBase)">
+            <summary>
+            Replaces the content with the new js/css paths
+            </summary>
+            <param name="html"></param>
+            <param name="namedGroup"></param>
+            <param name="extensions"></param>
+            <param name="type"></param>
+            <param name="regex"></param>
+            <param name="http"></param>
+            <returns></returns>
+            <remarks>
+            For some reason ampersands that aren't html escaped are not compliant to HTML standards when they exist in 'link' or 'script' tags in URLs,
+            we need to replace the ampersands with &amp; . This is only required for this one w3c compliancy, the URL itself is a valid URL.
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.ClientDependencyType">
+            <summary>
+            The type of client file
+            </summary>
+        </member>
+        <member name="F:ClientDependency.Core.NetworkHelper.GetConfigSection">
+            <summary>
+            Generally used for unit tests to get access to the settings
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.NetworkHelper.FileSafeMachineName">
+            <summary>
+            Returns the machine name that is safe to use in file paths.
+            </summary>
+            <remarks>
+            see: https://github.com/Shandem/ClientDependency/issues/4
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.NetworkHelper.MachineName">
+            <summary>
+            Returns the current machine name
+            </summary>
+            <remarks>
+            Tries to resolve the machine name, if it cannot it uses the config section.
+            </remarks>
+        </member>
+        <member name="T:ClientDependency.Core.PathsCollection">
+            <summary>
+            Allows for globally specifying paths for path aliases when registering dependencies
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.PlaceholderParser.ParseHtmlPlaceholders(System.Web.HttpContextBase,System.String,System.String,System.String,ClientDependency.Core.RendererOutput[])">
+            <summary>
+            This replaces the HTML placeholders that we're rendered into the html
+            markup before the module calls this method to update the placeholders with 
+            the real dependencies.
+            </summary>
+            <param name="currentContext"></param>
+            <param name="html"></param>
+            <param name="jsMarkupRegex"></param>
+            <param name="cssMarkupRegex"></param>
+            <param name="output"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClientDependency.Core.ClientDependencyAttribute">
+            <summary>
+            This attribute is used for data types that uses client assets like Javascript and CSS for liveediting.
+            The Live Editing feature in umbraco will look for this attribute and preload all dependencies to the page
+            to ensure that all client events and assets gets loaded
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.ClientDependencyAttribute.#ctor(System.Int32,ClientDependency.Core.ClientDependencyType,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClientDependency.Core.ClientDependencyAttribute"/> class.
+            </summary>
+            <param name="priority">The priority.</param>
+            <param name="dependencyType">Type of the dependency.</param>
+            <param name="fullFilePath">The file path to the dependency.</param>
+        </member>
+        <member name="M:ClientDependency.Core.ClientDependencyAttribute.#ctor(System.Int32,ClientDependency.Core.ClientDependencyType,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClientDependency.Core.ClientDependencyAttribute"/> class.
+            </summary>
+            <param name="priority">The priority.</param>
+            <param name="dependencyType">Type of the dependency.</param>
+            <param name="fileName"></param>
+            <param name="pathNameAlias"></param>
+        </member>
+        <member name="M:ClientDependency.Core.ClientDependencyAttribute.#ctor(System.Int32,System.Int32,ClientDependency.Core.ClientDependencyType,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClientDependency.Core.ClientDependencyAttribute"/> class.
+            </summary>
+            <param name="group"></param>
+            <param name="priority">The priority.</param>
+            <param name="dependencyType">Type of the dependency.</param>
+            <param name="fileName"></param>
+            <param name="pathNameAlias"></param>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.Priority">
+            <summary>
+            Gets or sets the priority.
+            </summary>
+            <value>The priority.</value>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.Group">
+            <summary>
+            Gets or sets the group.
+            </summary>
+            <value>The group.</value>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.ForceProvider">
+            <summary>
+            This can be empty and will use default provider
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.FilePath">
+            <summary>
+            Gets or sets the file path.
+            </summary>
+            <value>The file path.</value>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.PathNameAlias">
+            <summary>
+            The path alias to be pre-pended to the file path if specified.
+            The alias is specified in in the ClientDependencyHelper constructor.
+            If the alias specified does not exist in the ClientDependencyHelper
+            path collection, an exception is thrown.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.HtmlAttributesAsString">
+            <summary>
+            Used to set the HtmlAttributes on this class via a string which is parsed
+            </summary>
+            <remarks>
+            The syntax for the string must be: key1:value1,key2:value2   etc...
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.HtmlAttributes">
+            <summary>
+            Used to store additional attributes in the HTML markup for the item
+            </summary>
+            <remarks>
+            Mostly used for CSS Media, but could be for anything
+            </remarks>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.DependencyType">
+            <summary>
+            Gets or sets the type of the dependency.
+            </summary>
+            <value>The type of the dependency.</value>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.Name">
+            <summary>
+            Name of a framework such as jQuery, Bootstrap, Angular, etc.
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.Version">
+            <summary>
+            Version of this resource if it is a framework
+            Note this field is only used when Framework is specified
+            </summary>
+        </member>
+        <member name="P:ClientDependency.Core.ClientDependencyAttribute.ForceVersion">
+            <summary>
+            Force this version to be used. Meant for skin designers that wish to override
+            choices made by module developers or the framework.
+            </summary>
+        </member>
+        <member name="T:ClientDependency.Core.RequestHelper">
+            <summary>
+            A utility class for getting the string result from an URL resource
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.RequestHelper.TryReadUri(System.String,System.Web.HttpContextBase,System.Collections.Generic.IEnumerable{System.String},System.String@,System.Uri@)">
+            <summary>
+            Tries to convert the url to a uri, then read the request into a string and return it.
+            This takes into account relative vs absolute URI's
+            </summary>
+            <param name="url"></param>
+            <param name="approvedDomains">a list of domains approved to make requests to in order to get a response</param>
+            <param name="requestContents"></param>
+            <param name="http"></param>
+            <param name="resultUri">
+            The Uri that was used to get the result. Depending on the extension this may be absolute and might not be. 
+            If it is an aspx request, then it will be relative.
+            </param>
+            <returns>true if successful, false if not successful</returns>
+            <remarks>
+            if the path is a relative local path, the we use Server.Execute to get the request output, otherwise
+            if it is an absolute path, a WebClient request is made to fetch the contents.
+            </remarks>
+        </member>
+        <member name="M:ClientDependency.Core.RequestHelper.GetXmlResponse(System.Uri)">
+            <summary>
+            Gets the web response and ensures that the BOM is not present not matter what encoding is specified.
+            </summary>
+            <param name="resource"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ClientDependency.Core.StringExtensions.GetConfigSection">
+            <summary>
+            Generally used for unit tests to get access to the settings
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.StringExtensions.GenerateHash(System.String)">
+            <summary>
+            Generates a hash of a string based on the FIPS compliance setting.
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.StringExtensions.GenerateSha256Hash(System.String)">
+            <summary>
+            Generate a SHA256 hash of a string
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.StringExtensions.GenerateMd5(System.String)">
+            <summary>Generate a MD5 hash of a string
+            </summary>
+        </member>
+        <member name="M:ClientDependency.Core.StringExtensions.EndsWithOneOf(System.String,System.String[])">
+            <summary>
+            checks if the string ends with one of the strings specified. This ignores case.
+            </summary>
+            <param name="str"></param>
+            <param name="ext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.UriExtensions.MakeAbsoluteUri(System.Uri,System.Web.HttpContextBase)">
+            <summary>
+            Checks if the url is a local/relative uri, if it is, it makes it absolute based on the 
+            current request uri.
+            </summary>
+            <param name="uri"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClientDependency.Core.UriExtensions.IsLocalUri(System.Uri,System.Web.HttpContextBase)">
+            <summary>
+            Determines if the uri is a locally based web file
+            </summary>
+            <param name="uri"></param>
+            <param name="http"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.LiveConnect\bin\DotNetNuke.Authentication.LiveConnect.XML
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.LiveConnect\bin\DotNetNuke.Authentication.LiveConnect.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.LiveConnect\bin\DotNetNuke.Authentication.LiveConnect.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.LiveConnect\obj\Debug\DotNetNuke.Authentication.LiveConnect.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.LiveConnect\obj\Debug\DotNetNuke.Authentication.LiveConnect.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.LiveConnect\obj\Debug\DotNetNuke.Authentication.LiveConnect.pdb

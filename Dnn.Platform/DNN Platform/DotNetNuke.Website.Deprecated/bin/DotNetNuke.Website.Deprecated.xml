@@ -1,0 +1,1189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetNuke.Website.Deprecated</name>
+    </assembly>
+    <members>
+        <member name="P:DotNetNuke.UI.ControlPanel.AddModule.SelectedPortalSettings">
+            <summary>
+            Return the <see cref="T:DotNetNuke.Entities.Portals.PortalSettings"/> for the selected portal (from the Site list), unless
+            the site list is not visible or there are no other sites in our site group, in which case
+            it returns the PortalSettings for the current portal.
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.UI.ControlPanel.AddModule.SelectedModule">
+            <summary>The currently-selected module.</summary>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.UpdateAddModule">
+            <summary>
+            UpdateAddModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.AddNewModule">
+            <summary>
+            AddNewModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.AddExistingModule">
+            <summary>
+            AddExistingModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.hlMoreExtensions">
+            <summary>
+            hlMoreExtensions control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.Label1">
+            <summary>
+            Label1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.SiteListPanel">
+            <summary>
+            SiteListPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.SiteLbl">
+            <summary>
+            SiteLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.SiteList">
+            <summary>
+            SiteList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.CategoryListPanel">
+            <summary>
+            CategoryListPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.CategoryListLbl">
+            <summary>
+            CategoryListLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.CategoryList">
+            <summary>
+            CategoryList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PageListPanel">
+            <summary>
+            PageListPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PageListLbl">
+            <summary>
+            PageListLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PageLst">
+            <summary>
+            PageLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.ModuleLstLbl">
+            <summary>
+            ModuleLstLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.ModuleLst">
+            <summary>
+            ModuleLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.TitlePanel">
+            <summary>
+            TitlePanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.TitleLbl">
+            <summary>
+            TitleLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.Title">
+            <summary>
+            Title control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.VisibilityLstLbl">
+            <summary>
+            VisibilityLstLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.VisibilityLst">
+            <summary>
+            VisibilityLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.Label2">
+            <summary>
+            Label2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PaneLstLbl">
+            <summary>
+            PaneLstLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PaneLst">
+            <summary>
+            PaneLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PositionLstLbl">
+            <summary>
+            PositionLstLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PositionLst">
+            <summary>
+            PositionLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PaneModulesLstLbl">
+            <summary>
+            PaneModulesLstLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.PaneModulesLst">
+            <summary>
+            PaneModulesLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.chkCopyModule">
+            <summary>
+            chkCopyModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddModule.cmdAddModule">
+            <summary>
+            cmdAddModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.NameLbl">
+            <summary>
+            NameLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.Name">
+            <summary>
+            Name control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.TemplateLst">
+            <summary>
+            TemplateLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.LocationLst">
+            <summary>
+            LocationLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.PageLst">
+            <summary>
+            PageLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.IncludeInMenu">
+            <summary>
+            IncludeInMenu control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.AddPage.cmdAddPage">
+            <summary>
+            cmdAddPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.SwitchSite.SitesLst">
+            <summary>
+            SitesLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.SwitchSite.cmdSwitch">
+            <summary>
+            cmdSwitch control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.Name">
+            <summary>
+            Name control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.LocationLst">
+            <summary>
+            LocationLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.PageLst">
+            <summary>
+            PageLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.SkinLbl">
+            <summary>
+            SkinLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.SkinLst">
+            <summary>
+            SkinLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.IncludeInMenu">
+            <summary>
+            IncludeInMenu control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.IncludeInMenuLbl">
+            <summary>
+            IncludeInMenuLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.IsDisabled">
+            <summary>
+            IsDisabled control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.DisabledLbl">
+            <summary>
+            DisabledLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.IsSecurePanel">
+            <summary>
+            IsSecurePanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.IsSecureLbl">
+            <summary>
+            IsSecureLbl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.IsSecure">
+            <summary>
+            IsSecure control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanel.UpdatePage.cmdUpdate">
+            <summary>
+            cmdUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.ControlPanel">
+            <summary>
+            ControlPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.conrolbar_logo">
+            <summary>
+            conrolbar_logo control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.controlBar_SwitchSite">
+            <summary>
+            controlBar_SwitchSite control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.controlBar_SwitchLanguage">
+            <summary>
+            controlBar_SwitchLanguage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.helpLink">
+            <summary>
+            helpLink control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.CustomMenuItems">
+            <summary>
+            CustomMenuItems control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.CategoryList">
+            <summary>
+            CategoryList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.PageList">
+            <summary>
+            PageList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.ControlBar.VisibilityLst">
+            <summary>
+            VisibilityLst control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ControlPanel">
+            <summary>
+            ControlPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.adminMenus">
+            <summary>
+            adminMenus control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.lblUILanguage">
+            <summary>
+            lblUILanguage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ddlUICulture">
+            <summary>
+            ddlUICulture control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.lblMode">
+            <summary>
+            lblMode control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ddlMode">
+            <summary>
+            ddlMode control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.hypMessage">
+            <summary>
+            hypMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.BodyPanel">
+            <summary>
+            BodyPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CommonTasksPanel">
+            <summary>
+            CommonTasksPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.AddMod">
+            <summary>
+            AddMod control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CurrentPagePanel">
+            <summary>
+            CurrentPagePanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CurrentTabActions">
+            <summary>
+            CurrentTabActions control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.EditCurrentSettings">
+            <summary>
+            EditCurrentSettings control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.NewPage">
+            <summary>
+            NewPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CopyPage">
+            <summary>
+            CopyPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.DeletePage">
+            <summary>
+            DeletePage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ImportPage">
+            <summary>
+            ImportPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ExportPage">
+            <summary>
+            ExportPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CurrentTabCopyToChildren">
+            <summary>
+            CurrentTabCopyToChildren control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CopyPermissionsToChildren">
+            <summary>
+            CopyPermissionsToChildren control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CopyDesignToChildren">
+            <summary>
+            CopyDesignToChildren control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CurrentTabAddPage">
+            <summary>
+            CurrentTabAddPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.AddPage">
+            <summary>
+            AddPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CurrentTabEditPage">
+            <summary>
+            CurrentTabEditPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.EditPage">
+            <summary>
+            EditPage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.AdminPanel">
+            <summary>
+            AdminPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.SiteTabManage">
+            <summary>
+            SiteTabManage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.NewUser">
+            <summary>
+            NewUser control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.NewRole">
+            <summary>
+            NewRole control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.UploadFile">
+            <summary>
+            UploadFile control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ClearCache">
+            <summary>
+            ClearCache control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.RecycleApp">
+            <summary>
+            RecycleApp control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.AdvancedToolsPanel">
+            <summary>
+            AdvancedToolsPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.SystemTabTools">
+            <summary>
+            SystemTabTools control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.WebServerManager">
+            <summary>
+            WebServerManager control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.SupportTickets">
+            <summary>
+            SupportTickets control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.ImpersonateUser">
+            <summary>
+            ImpersonateUser control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.IntegrityChecker">
+            <summary>
+            IntegrityChecker control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.SystemTabSwitchSite">
+            <summary>
+            SystemTabSwitchSite control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.SwitchSite">
+            <summary>
+            SwitchSite control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.CurrentTabHelp">
+            <summary>
+            CurrentTabHelp control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.UI.ControlPanels.RibbonBar.Help">
+            <summary>
+            Help control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:DotNetNuke.Modules.Admin.FileManager.WebUpload">
+            -----------------------------------------------------------------------------
+            Project	 : DotNetNuke
+            Class	 : WebUpload
+            -----------------------------------------------------------------------------
+            <summary>
+            Supplies the functionality for uploading files to the Portal
+            </summary>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.Admin.FileManager.WebUpload.CheckSecurity">
+            -----------------------------------------------------------------------------
+            <summary>
+            This routine checks the Access Security
+            </summary>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.Admin.FileManager.WebUpload.LoadFolders">
+            -----------------------------------------------------------------------------
+            <summary>
+            This routine populates the Folder List Drop Down
+            There is no reference to permissions here as all folders should be available to the admin.
+            </summary>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.Admin.FileManager.WebUpload.ReturnURL">
+            -----------------------------------------------------------------------------
+            <summary>
+            This routine determines the Return Url
+            </summary>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.Admin.FileManager.WebUpload.OnLoad(System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Page_Load runs when the page loads
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.Admin.FileManager.WebUpload.cmdAdd_Click(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            The cmdAdd_Click runs when the Add Button is clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="M:DotNetNuke.Modules.Admin.FileManager.WebUpload.cmdReturn_Click(System.Object,System.EventArgs)">
+            -----------------------------------------------------------------------------
+            <summary>
+            The cmdReturn_Click runs when the Return Button is clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.rootRow">
+            <summary>
+            rootRow control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.lblRootType">
+            <summary>
+            lblRootType control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.lblRootFolder">
+            <summary>
+            lblRootFolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.plBrowse">
+            <summary>
+            plBrowse control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.cmdBrowse">
+            <summary>
+            cmdBrowse control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.cmdAdd">
+            <summary>
+            cmdAdd control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.foldersRow">
+            <summary>
+            foldersRow control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.plFolder">
+            <summary>
+            plFolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.ddlFolders">
+            <summary>
+            ddlFolders control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.unzipRow">
+            <summary>
+            unzipRow control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.Label1">
+            <summary>
+            Label1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.chkUnzip">
+            <summary>
+            chkUnzip control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.lblMessage">
+            <summary>
+            lblMessage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.maxSizeWarningLabel">
+            <summary>
+            maxSizeWarningLabel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.cmdReturn1">
+            <summary>
+            cmdReturn1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.tblLogs">
+            <summary>
+            tblLogs control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.lblLogTitle">
+            <summary>
+            lblLogTitle control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.phPaLogs">
+            <summary>
+            phPaLogs control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.Admin.FileManager.WebUpload.cmdReturn2">
+            <summary>
+            cmdReturn2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Google\bin\DotNetNuke.Authentication.Google.XML
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Google\bin\DotNetNuke.Authentication.Google.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Google\bin\DotNetNuke.Authentication.Google.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Google\obj\Debug\DotNetNuke.Authentication.Google.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Google\obj\Debug\DotNetNuke.Authentication.Google.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Google\obj\Debug\DotNetNuke.Authentication.Google.pdb

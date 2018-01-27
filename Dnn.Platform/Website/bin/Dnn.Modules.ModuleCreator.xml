@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.Modules.ModuleCreator</name>
+    </assembly>
+    <members>
+        <member name="T:Dnn.Modules.ModuleCreator.Components.BusinessController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dnn.Modules.ModuleCreator.Components.BusinessController.UpgradeModule(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.Module.ModuleCreator.CreateModule.CreateModuleDefinition">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.createForm">
+            <summary>
+            createForm control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.plOwner">
+            <summary>
+            plOwner control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.txtOwner">
+            <summary>
+            txtOwner control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.plModule">
+            <summary>
+            plModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.txtModule">
+            <summary>
+            txtModule control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.plDescription">
+            <summary>
+            plDescription control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.txtDescription">
+            <summary>
+            txtDescription control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.plLanguage">
+            <summary>
+            plLanguage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.optLanguage">
+            <summary>
+            optLanguage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.plTemplate">
+            <summary>
+            plTemplate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.cboTemplate">
+            <summary>
+            cboTemplate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.plControl">
+            <summary>
+            plControl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.txtControl">
+            <summary>
+            txtControl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.cmdCreate">
+            <summary>
+            cmdCreate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.CreateModule.lblDescription">
+            <summary>
+            lblDescription control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.plFile">
+            <summary>
+            plFile control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cboFile">
+            <summary>
+            cboFile control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.plSource">
+            <summary>
+            plSource control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.lblPath">
+            <summary>
+            lblPath control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.txtSource">
+            <summary>
+            txtSource control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cmdUpdate">
+            <summary>
+            cmdUpdate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cmdConfigure">
+            <summary>
+            cmdConfigure control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cmdPackage">
+            <summary>
+            cmdPackage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cmdCancel1">
+            <summary>
+            cmdCancel1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.plLanguage">
+            <summary>
+            plLanguage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.optLanguage">
+            <summary>
+            optLanguage control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.plTemplate">
+            <summary>
+            plTemplate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cboTemplate">
+            <summary>
+            cboTemplate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.plControl">
+            <summary>
+            plControl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.txtControl">
+            <summary>
+            txtControl control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.plType">
+            <summary>
+            plType control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cboType">
+            <summary>
+            cboType control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cmdCreate">
+            <summary>
+            cmdCreate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.cmdCancel2">
+            <summary>
+            cmdCancel2 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Module.ModuleCreator.ViewSource.lblDescription">
+            <summary>
+            lblDescription control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

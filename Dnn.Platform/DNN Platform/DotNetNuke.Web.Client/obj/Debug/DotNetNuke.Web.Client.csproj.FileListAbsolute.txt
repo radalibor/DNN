@@ -1,0 +1,17 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Web.Client.XML
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Web.Client.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Web.Client.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\ClientDependency.Core.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Instrumentation.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.log4net.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\ClientDependency.Core.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\ClientDependency.Core.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Instrumentation.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Instrumentation.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.log4net.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\obj\Debug\DotNetNuke.Web.Client.csprojResolveAssemblyReference.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\obj\Debug\DotNetNuke.Web.Client.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\obj\Debug\DotNetNuke.Web.Client.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\obj\Debug\DotNetNuke.Web.Client.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Web.Client.dll.CodeAnalysisLog.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Web.Client\bin\DotNetNuke.Web.Client.dll.lastcodeanalysissucceeded

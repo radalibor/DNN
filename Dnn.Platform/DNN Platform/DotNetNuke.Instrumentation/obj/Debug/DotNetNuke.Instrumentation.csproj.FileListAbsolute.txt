@@ -1,0 +1,11 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\DotNetNuke.Instrumentation.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\DotNetNuke.Instrumentation.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\DotNetNuke.Instrumentation.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\dotnetnuke.log4net.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\dotnetnuke.log4net.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\obj\Debug\DotNetNuke.Instrumentation.csprojResolveAssemblyReference.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\obj\Debug\DotNetNuke.Instrumentation.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\obj\Debug\DotNetNuke.Instrumentation.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\obj\Debug\DotNetNuke.Instrumentation.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\DotNetNuke.Instrumentation.dll.CodeAnalysisLog.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\DotNetNuke.Instrumentation\bin\DotNetNuke.Instrumentation.dll.lastcodeanalysissucceeded

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetNuke.Web.DDRMenu</name>
+    </assembly>
+    <members>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.MenuStyle">
+            <summary>
+            MenuStyle control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.NodeXmlPath">
+            <summary>
+            NodeXmlPath control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.NodeSelector">
+            <summary>
+            NodeSelector control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.IncludeNodes">
+            <summary>
+            IncludeNodes control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.ExcludeNodes">
+            <summary>
+            ExcludeNodes control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.NodeManipulator">
+            <summary>
+            NodeManipulator control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.IncludeContext">
+            <summary>
+            IncludeContext control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.IncludeHiddenSection">
+            <summary>
+            IncludeHiddenSection control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.IncludeHidden">
+            <summary>
+            IncludeHidden control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.TemplateArguments">
+            <summary>
+            TemplateArguments control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Web.DDRMenu.MenuSettings.ClientOptions">
+            <summary>
+            ClientOptions control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

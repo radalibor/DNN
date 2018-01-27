@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetNuke.Modules.HtmlEditorManager</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.Components.UpgradeController">
+            <summary>
+            Class that contains upgrade procedures
+            </summary>
+        </member>
+        <member name="F:DotNetNuke.Modules.HtmlEditorManager.Components.UpgradeController.ModuleFolder">
+            <summary>The module folder location</summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Components.UpgradeController.UpgradeModule(System.String)">
+            <summary>Called when a module is upgraded.</summary>
+            <param name="version">The version.</param>
+            <returns>Success if all goes well, otherwise, Failed</returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Components.UpgradeController.GetModuleDefinitionID(System.String,System.String)">
+            <summary>Gets the module definition identifier.</summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="moduleDefinitionName">Name of the module definition.</param>
+            <returns>The Module Id for the HTML Editor Management module</returns>
+        </member>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.ViewModels.ProviderConfigurationViewModel">
+            <summary>
+            Model for provider configuration
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.ViewModels.ProviderConfigurationViewModel.Editors">
+            <summary>Gets or sets the editors.</summary>
+            <value>The editors.</value>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.ViewModels.ProviderConfigurationViewModel.SelectedEditor">
+            <summary>Gets or sets the selected editor.</summary>
+            <value>The selected editor.</value>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.ViewModels.ProviderConfigurationViewModel.CanSave">
+            <summary>Gets or sets a value indicating whether the provider can be saved.</summary>
+            <value><c>true</c> if this instance can save; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter">
+            <summary>
+            Presenter for Provider Configuration
+            </summary>
+        </member>
+        <member name="F:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.HtmlEditorNode">
+            <summary>The HTML editor node</summary>
+        </member>
+        <member name="F:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.dotnetNukeDocument">
+            <summary>The dot net nuke document</summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.#ctor(DotNetNuke.Modules.HtmlEditorManager.Views.IProviderConfigurationView)">
+            <summary>Initializes a new instance of the <see cref="T:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter" /> class.</summary>
+            <param name="view">the interface provider view.</param>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.DNNConfiguration">
+            <summary>Gets the DNN configuration.</summary>
+            <value>The DNN configuration.</value>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.View_Initialize(System.Object,System.EventArgs)">
+            <summary>Handles the Initialize event of the View control.</summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.LoadCurrentEditor(System.String)">
+            <summary>Loads the current editor.</summary>
+            <param name="editorName">Name of the editor.</param>
+            <returns>The editor based on the current editor settings in the web configuration</returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.LoadCurrentEditor">
+            <summary>Loads the current editor.</summary>
+            <returns>The editor based on the current editor settings in the web configuration</returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.View_EditorChanged(System.Object,DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs)">
+            <summary>Handles the Editor was changed event of the View control.</summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.View_SaveEditorChoice(System.Object,DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs)">
+            <summary>Handles the SaveEditorChoice event of the View control.</summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.SaveEditorInConfiguration(System.String)">
+            <summary>Saves the editor in configuration.</summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.GetHtmlEditorProviderNode(System.Xml.XmlDocument)">
+            <summary>Gets the HTML provider node.</summary>
+            <param name="dnnConfiguration">The DNN configuration.</param>
+            <returns>The XmlNode for the htmlEditor provider.</returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.GetAvailableEditors">
+            <summary>Gets the provider list.</summary>
+            <returns>A list of the installed providers</returns>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Presenters.ProviderConfigurationPresenter.GetSelectedEditor">
+            <summary>Gets the selected editor.</summary>
+            <returns>The currently configured editor</returns>
+        </member>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.Views.InvalidConfiguration">
+            <summary>
+            Control to display information about provider not being supported.
+            </summary>
+        </member>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs">
+            <summary>
+            Contains information about the selected editor when saving
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs" /> class.</summary>
+            <param name="editor">The editor.</param>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.Views.EditorEventArgs.Editor">
+            <summary>Gets a value indicating whether this data comes from a valid form submission.</summary>
+        </member>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.Views.IProviderConfigurationView">
+            <summary>
+            Interface for the Provider Configuration View
+            </summary>
+        </member>
+        <member name="E:DotNetNuke.Modules.HtmlEditorManager.Views.IProviderConfigurationView.SaveEditorChoice">
+            <summary>Occurs when [save editor choice].</summary>
+        </member>
+        <member name="E:DotNetNuke.Modules.HtmlEditorManager.Views.IProviderConfigurationView.EditorChanged">
+            <summary>Occurs when the editor changed.</summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.Views.IProviderConfigurationView.Editor">
+            <summary>Gets or sets the editor panel.</summary>
+            <value>The editor panel.</value>
+        </member>
+        <member name="T:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration">
+            <summary>
+            View control for selecting an HTML provider
+            </summary>
+        </member>
+        <member name="E:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.SaveEditorChoice">
+            <summary>Occurs when the save button is clicked.</summary>
+        </member>
+        <member name="E:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.EditorChanged">
+            <summary>Occurs when the editor is changed.</summary>
+        </member>
+        <member name="P:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.Editor">
+            <summary>Gets or sets the editor panel.</summary>
+            <value>The editor panel.</value>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.SaveButton_Click(System.Object,System.EventArgs)">
+            <summary>Handles the Click event of the SaveButton control.</summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.ProvidersDropDownList_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>Handles the SelectedIndexChanged event of the ProvidersDropDownList control.</summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.ProvidersDropDownList">
+            <summary>
+            ProvidersDropDownList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.SaveButton">
+            <summary>
+            SaveButton control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:DotNetNuke.Modules.HtmlEditorManager.Views.ProviderConfiguration.EditorPanel">
+            <summary>
+            EditorPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

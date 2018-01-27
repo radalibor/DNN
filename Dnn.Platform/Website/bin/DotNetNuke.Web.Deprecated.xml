@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetNuke.Web.Deprecated</name>
+    </assembly>
+    <members>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.CommandName">
+            <summary>
+            Gets or sets the CommandName for the Column
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.EditMode">
+            <summary>
+            EditMode for the Column
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.ImageURL">
+            <summary>
+            Gets or sets the URL of the Image
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.IconKey">
+            <summary>
+            The Icon Key to obtain ImageURL
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.IconSize">
+            <summary>
+            The Icon Siz to obtain ImageURL
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.IconStyle">
+            <summary>
+            The Icon Style to obtain ImageURL
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.KeyField">
+            <summary>
+            The Key Field that provides a Unique key to the data Item
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.NavigateURL">
+            <summary>
+            Gets or sets the URL of the Link (unless DataBinding through KeyField)
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.NavigateURLFormatString">
+            <summary>
+            Gets or sets the URL Formatting string
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.OnClickJs">
+            <summary>
+            Javascript text to attach to the OnClick Event
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.ShowImage">
+            <summary>
+            Gets or sets whether an Image is displayed
+            </summary>
+            <remarks>Defaults to True</remarks>
+            <value>A Boolean</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.Text">
+            <summary>
+            Gets or sets the Text (for Header/Footer Templates)
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.VisibleField">
+            <summary>
+            An flag that indicates whether the buttons are visible.
+            </summary>
+            <value>A Boolean</value>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.CreateTemplate(Telerik.Web.UI.GridItemType)">
+            <summary>
+            Creates a ImageCommandColumnTemplate
+            </summary>
+            <returns>A ImageCommandColumnTemplate</returns>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumn.Initialize">
+            <summary>
+            Initialises the Column
+            </summary>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.CommandName">
+            <summary>
+            Gets or sets the CommandName for the Column
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.DesignMode">
+            <summary>
+            Gets or sets the Design Mode of the Column
+            </summary>
+            <value>A Boolean</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.EditMode">
+            <summary>
+            Gets or sets the CommandName for the Column
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.ImageURL">
+            <summary>
+            Gets or sets the URL of the Image
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.ItemType">
+            <summary>
+            The type of Template to Create
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.KeyField">
+            <summary>
+            The Key Field that provides a Unique key to the data Item
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.NavigateURL">
+            <summary>
+            Gets or sets the URL of the Link (unless DataBinding through KeyField)
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.NavigateURLFormatString">
+            <summary>
+            Gets or sets the URL Formatting string
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.OnClickJs">
+            <summary>
+            Javascript text to attach to the OnClick Event
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.ShowImage">
+            <summary>
+            Gets or sets whether an Image is displayed
+            </summary>
+            <remarks>Defaults to True</remarks>
+            <value>A Boolean</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.Text">
+            <summary>
+            Gets or sets the Text (for Header/Footer Templates)
+            </summary>
+            <value>A String</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.Visible">
+            <summary>
+            An flag that indicates whether the buttons are visible (this is overridden if
+            the VisibleField is set)
+            changed
+            </summary>
+            <value>A Boolean</value>
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.VisibleField">
+            <summary>
+            An flag that indicates whether the buttons are visible.
+            </summary>
+            <value>A Boolean</value>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.InstantiateIn(System.Web.UI.Control)">
+            <summary>
+            InstantiateIn instantiates the template (implementation of ITemplate)
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="container">The parent container (DataGridItem)</param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.GetIsVisible(Telerik.Web.UI.GridItem)">
+            <summary>
+            Gets whether theButton is visible
+            </summary>
+            <param name="container">The parent container (DataGridItem)</param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.GetValue(Telerik.Web.UI.GridItem)">
+            <summary>
+            Gets the value of the key
+            </summary>
+            <param name="container">The parent container (DataGridItem)</param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.DnnGridImageCommandColumnTemplate.ItemDataBinding(System.Object,System.EventArgs)">
+            <summary>
+            Item_DataBinding runs when an Item of type GridItemType.Item is being data-bound
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="sender"> The object that triggers the event</param>
+            <param name="e">An EventArgs object</param>
+        </member>
+        <member name="T:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl">
+            -----------------------------------------------------------------------------
+            <summary>
+            The DateEditControl control provides a standard UI component for editing
+            date properties.
+            </summary>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.DateValue">
+            -----------------------------------------------------------------------------
+            <summary>
+            DateValue returns the Date representation of the Value
+            </summary>
+            <value>A Date representing the Value</value>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.DefaultFormat">
+            -----------------------------------------------------------------------------
+            <summary>
+            DefaultDateFormat is a string that will be used to format the date in the absence of a
+            FormatAttribute
+            </summary>
+            <value>A String representing the default format to use to render the date</value>
+            <returns>A Format String</returns>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.Format">
+            -----------------------------------------------------------------------------
+            <summary>
+            Format is a string that will be used to format the date in View mode
+            </summary>
+            <value>A String representing the format to use to render the date</value>
+            <returns>A Format String</returns>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.OldDateValue">
+            -----------------------------------------------------------------------------
+            <summary>
+            OldDateValue returns the Date representation of the OldValue
+            </summary>
+            <value>A Date representing the OldValue</value>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.StringValue">
+            <summary>
+            The Value expressed as a String
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.OnDataChanged(System.EventArgs)">
+            <summary>
+            OnDataChanged is called by the PostBack Handler when the Data has changed
+            </summary>
+            <param name="e">An EventArgs object</param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.RenderEditMode(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            RenderEditMode is called by the base control to render the control in Edit Mode
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateEditControl.RenderViewMode(System.Web.UI.HtmlTextWriter)">
+            -----------------------------------------------------------------------------
+            <summary>
+            RenderViewMode renders the View (readonly) mode of the control
+            </summary>
+            <param name="writer">A HtmlTextWriter.</param>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="T:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl">
+            -----------------------------------------------------------------------------
+            Project:    DotNetNuke
+            Namespace:  DotNetNuke.UI.WebControls
+            Class:      DateEditControl
+            -----------------------------------------------------------------------------
+            <summary>
+            The DateEditControl control provides a standard UI component for editing
+            date properties.
+            </summary>
+            <remarks>
+            </remarks>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.DateValue">
+            -----------------------------------------------------------------------------
+            <summary>
+            DateValue returns the Date representation of the Value
+            </summary>
+            <value>A Date representing the Value</value>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.DefaultFormat">
+            -----------------------------------------------------------------------------
+            <summary>
+            DefaultDateFormat is a string that will be used to format the date in the absence of a
+            FormatAttribute
+            </summary>
+            <value>A String representing the default format to use to render the date</value>
+            <returns>A Format String</returns>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.Format">
+            -----------------------------------------------------------------------------
+            <summary>
+            Format is a string that will be used to format the date in View mode
+            </summary>
+            <value>A String representing the format to use to render the date</value>
+            <returns>A Format String</returns>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.OldDateValue">
+            -----------------------------------------------------------------------------
+            <summary>
+            OldDateValue returns the Date representation of the OldValue
+            </summary>
+            <value>A Date representing the OldValue</value>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.StringValue">
+            <summary>
+            The Value expressed as a String
+            </summary>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.OnDataChanged(System.EventArgs)">
+            <summary>
+            OnDataChanged is called by the PostBack Handler when the Data has changed
+            </summary>
+            <param name="e">An EventArgs object</param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.RenderEditMode(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            RenderEditMode is called by the base control to render the control in Edit Mode
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DotNetNuke.Web.UI.WebControls.PropertyEditorControls.DateTimeEditControl.RenderViewMode(System.Web.UI.HtmlTextWriter)">
+            -----------------------------------------------------------------------------
+            <summary>
+            RenderViewMode renders the View (readonly) mode of the control
+            </summary>
+            <param name="writer">A HtmlTextWriter.</param>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnLanguageComboBox.AutoPostBack">
+            -----------------------------------------------------------------------------
+            <summary>
+              Determines whether the List Auto Posts Back
+            </summary>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridButtonColumn.IconKey">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Icon Key to obtain ImageURL
+            </summary>
+            <value>A String</value>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridButtonColumn.IconSize">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Icon Siz to obtain ImageURL
+            </summary>
+            <value>A String</value>
+            -----------------------------------------------------------------------------
+        </member>
+        <member name="P:DotNetNuke.Web.UI.WebControls.DnnGridButtonColumn.IconStyle">
+            -----------------------------------------------------------------------------
+            <summary>
+            The Icon Style to obtain ImageURL
+            </summary>
+            <value>A String</value>
+            -----------------------------------------------------------------------------
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dnn.Modules.Console</name>
+    </assembly>
+    <members>
+        <member name="T:Dnn.Modules.Console.Components.BusinessController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dnn.Modules.Console.Components.BusinessController.UpgradeModule(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dnn.Modules.Console.Components.ConsoleController">
+            <summary>
+            Controls the Console
+            </summary>
+        </member>
+        <member name="M:Dnn.Modules.Console.Components.ConsoleController.GetSizeValues">
+            <summary>
+            Gets the size values.
+            </summary>
+            <returns>A list with different icon types</returns>
+        </member>
+        <member name="M:Dnn.Modules.Console.Components.ConsoleController.GetViewValues">
+            <summary>
+            Gets the view values.
+            </summary>
+            <returns>Show or Hide</returns>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.Label1">
+            <summary>
+            Label1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.modeList">
+            <summary>
+            modeList control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.parentTabRow">
+            <summary>
+            parentTabRow control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblParentTab">
+            <summary>
+            lblParentTab control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.ParentTab">
+            <summary>
+            ParentTab control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.includeParentRow">
+            <summary>
+            includeParentRow control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblIncludeParent">
+            <summary>
+            lblIncludeParent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.IncludeParent">
+            <summary>
+            IncludeParent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.tabVisibilityRow">
+            <summary>
+            tabVisibilityRow control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.tabsLabel">
+            <summary>
+            tabsLabel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.tabs">
+            <summary>
+            tabs control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblDefaultSize">
+            <summary>
+            lblDefaultSize control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.DefaultSize">
+            <summary>
+            DefaultSize control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblAllowResize">
+            <summary>
+            lblAllowResize control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.AllowResize">
+            <summary>
+            AllowResize control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblDefaultView">
+            <summary>
+            lblDefaultView control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.DefaultView">
+            <summary>
+            DefaultView control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblAllowViewChange">
+            <summary>
+            lblAllowViewChange control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.AllowViewChange">
+            <summary>
+            AllowViewChange control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblShowTooltip">
+            <summary>
+            lblShowTooltip control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.ShowTooltip">
+            <summary>
+            ShowTooltip control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblOrderTabsByHierarchy">
+            <summary>
+            lblOrderTabsByHierarchy control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.OrderTabsByHierarchy">
+            <summary>
+            OrderTabsByHierarchy control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblIncludeHiddenPages">
+            <summary>
+            lblIncludeHiddenPages control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.IncludeHiddenPages">
+            <summary>
+            IncludeHiddenPages control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.lblConsoleWidth">
+            <summary>
+            lblConsoleWidth control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.Settings.ConsoleWidth">
+            <summary>
+            ConsoleWidth control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.ViewConsole.Console">
+            <summary>
+            Console control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.ViewConsole.IconSize">
+            <summary>
+            IconSize control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.ViewConsole.View">
+            <summary>
+            View control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.ViewConsole.SettingsBreak">
+            <summary>
+            SettingsBreak control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:Dnn.Modules.Console.ViewConsole.DetailView">
+            <summary>
+            DetailView control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

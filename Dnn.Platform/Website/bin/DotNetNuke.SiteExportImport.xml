@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetNuke.SiteExportImport</name>
+    </assembly>
+    <members>
+        <member name="T:Dnn.ExportImport.App_LocalResources.ExportImport">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.InvalidPortal_Text">
+            <summary>
+              Looks up a localized string similar to Invalid portal..
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobNotExist_Text">
+            <summary>
+              Looks up a localized string similar to No such job!.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobStatus_Cancelled_Text">
+            <summary>
+              Looks up a localized string similar to Cancelled.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobStatus_DoneFailure_Text">
+            <summary>
+              Looks up a localized string similar to Failed.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobStatus_DoneSuccess_Text">
+            <summary>
+              Looks up a localized string similar to Successful.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobStatus_InProgress_Text">
+            <summary>
+              Looks up a localized string similar to In Progress.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobStatus_Submitted_Text">
+            <summary>
+              Looks up a localized string similar to Submitted.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobType_Export_Text">
+            <summary>
+              Looks up a localized string similar to Site Export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.JobType_Import_Text">
+            <summary>
+              Looks up a localized string similar to Site Import.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.App_LocalResources.ExportImport.NotPortalAdmin_Text">
+            <summary>
+              Looks up a localized string similar to User is not a portal administrator.
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.ZipFolder(System.String,System.String)">
+            <summary>
+            Compress a full folder.
+            </summary>
+            <param name="folderPath">Full path of folder to compress</param>
+            <param name="archivePath">Full path of the archived file</param>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.UnZipArchive(System.String,System.String,System.Boolean)">
+            <summary>
+            Unzip compressed file to a folder.
+            </summary>
+            <param name="archivePath">Full path to archive with name</param>
+            <param name="extractFolder">Full path to the target folder</param>
+            <param name="overwrite">Overwrites the files on target if true.</param>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.UnZipArchiveExcept(System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Unzip compressed file to a folder.
+            </summary>
+            <param name="archivePath">Full path to archive with name</param>
+            <param name="extractFolder">Full path to the target folder</param>
+            <param name="overwrite">Overwrites the files on target if true.</param>
+            <param name="exceptionList">List of files to exlude from extraction.</param>
+            <param name="deleteFromSoure">Delete the files from the archive after extraction</param>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.UnZipFileFromArchive(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Unzip a single file from an archive.
+            </summary>
+            <param name="fileName">Name of the file to extract. This name should match the entry name in the archive. i.e. it should include complete folder structure inside the archive.</param>
+            <param name="archivePath">Full path to archive with name</param>
+            <param name="extractFolder">Full path to the target folder</param>
+            <param name="overwrite">Overwrites the file on target if true.</param>
+            <param name="deleteFromSoure">Delete the file from the archive after extraction</param>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.AddFilesToArchive(System.IO.Compression.ZipArchive,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.String)">
+            <summary>
+            Add files to an archive. If no archive exists, new one is created.
+            </summary>
+            <param name="archive">Source archive to write the files to</param>
+            <param name="files">List containing path of files to add to archive.</param>
+            <param name="folderOffset">Starting index(Index in file url) of the root folder in archive based on what the folder structure starts in archive.
+            e.g. if file url is c:\\dnn\files\archived\foldername\1\file.jpg and we want to add all files in foldername folder 
+            then the folder offset would be starting index of foldername</param>
+            <param name="folder">Additional root folder to be added into archive.</param>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.AddFileToArchive(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Add single file to an archive. If no archive exists, new one is created.
+            </summary>
+            <param name="file">Full path of file to add</param>
+            <param name="archivePath">Full path of archive file</param>
+            <param name="folderOffset">Starting index(Index in file url) of the root folder in archive based on what the folder structure starts in archive.
+            e.g. if file url is c:\\dnn\files\archived\foldername\1\file.jpg and we want to add all files in foldername folder 
+            then the folder offset would be starting index of foldername</param>
+            <param name="folder">Additional root folder to be added into archive.</param>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.CompressionUtil.OpenCreate(System.String)">
+            <summary>
+            Open the archive file for read and write.
+            </summary>
+            <param name="archiveFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.Util.ConvertToDbLocalTime(System.Nullable{System.DateTime})">
+            <summary>
+            Convert the UTC time to Database local time.
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Common.Util.ConvertToDbUtcTime(System.Nullable{System.DateTime})">
+            <summary>
+            Convert the Local time to Database Utc time.
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Dnn.ExportImport.Components.Common.Constants.CurrentSchemaVersion">
+            <summary>
+            This is the currently supported schema version support as of this release.
+            In future releases thi must be updated to be compatible wiht th e
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Common.ExportMode">
+            <summary>
+            Mode for export job.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Common.CollisionResolution">
+            <summary>
+            Specifies what to do when there is a collision during the import process.
+            </summary>
+        </member>
+        <member name="F:Dnn.ExportImport.Components.Common.CollisionResolution.Ignore">
+            <summary>
+            Ignore the imported item and continue.
+            </summary>
+        </member>
+        <member name="F:Dnn.ExportImport.Components.Common.CollisionResolution.Overwrite">
+            <summary>
+            Overwrites the existing item upon importing.
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Controllers.BaseController.GetAllJobs(System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Retrieves one page of paginated proceessed jobs
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Controllers.BaseController.GetLastJobTime(System.Int32,Dnn.ExportImport.Components.Common.JobType)">
+            <summary>
+            Get the last time a successful export job has started.
+            This date/time is in uts and can be used to set the next
+            differntial date/time to start the job from.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Controllers.BusinessController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Controllers.BusinessController.UpgradeModule(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Controllers.ImportController.GetImportPackages(System.Int32@,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get list of packages to import
+            </summary>
+            <param name="total">Total number of packages</param>
+            <param name="keyword">Keyword to search the import package. This will look into the package name and description</param>
+            <param name="order">Order by which the packages list should be sorted. Allowed values: newest, oldest, name</param>
+            <param name="pageIndex">Page index to get</param>
+            <param name="pageSize">Page size. Should not be more than 100.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.SchemaVersion">
+            <summary>
+            Specifies the version of the exportes schema.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.PortalId">
+            <summary>
+            ID of portal to export items from.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ProductSku">
+            <summary>
+            SKU of the product from which the export is done.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ProductVersion">
+            <summary>
+            Version of the product from which the export is done.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ExportName">
+            <summary>
+            Name of export job.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ExportDescription">
+            <summary>
+            Description of export job.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ItemsToExport">
+            <summary>
+            Names of items to export
+            </summary>
+            <example>["Content", "Assets", "Users"]</example>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeDeletions">
+            <summary>
+            Whether to include deleted items in the export.
+            Note that these will be deleted on the imported site.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeContent">
+            <summary>
+             Whether to include the content items in the exported file.
+            This applies to items such as pages/tabs and the content of their modules.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeFiles">
+            <summary>
+            Whether to include item files in the exported file.
+            This applies for user files and content files.
+            In case the folder's and files were included in the 
+            <see cref="P:Dnn.ExportImport.Components.Dto.ExportDto.ItemsToExport"/> then, this flag will be set to false.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeUsers">
+            <summary>
+            Whether to include users in the export file or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeVocabularies">
+            <summary>
+            Whether to include vocabularies in the export file or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeTemplates">
+            <summary>
+            Whether to include page templates in export file or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeProperfileProperties">
+            <summary>
+            Whether to include profile properties in exported file. 
+            When this flag is enabled only then userprofile would be exported.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeExtensions">
+            <summary>
+            Whether to include modules packages in exported file.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludeRoles">
+            <summary>
+            Whether to include roles or not in export file.
+            If this flag is disabled, User Roles won't be exported.
+            If this flag is disabled, Assets permissions won't be exported.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IncludePermissions">
+            <summary>
+            Whether to incldue permissions with each entity in export file or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ExportMode">
+            <summary>
+            Export mode. Differential or Complete.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.FromDateUtc">
+            <summary>
+            Items' last modified on or created on for the items which need to be exported.
+            This time format should be local time with offset in order to bae sure to export
+            items properly and reduce the possibility of export issues.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.ToDateUtc">
+            <summary>
+            Date when job was created. 
+            NOTE: This will be set internally only by the engine and not by the UI
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.Pages">
+            <summary>
+            The pages to be exported. These are the ID's (plus other information)
+            of all checked items but not their children when a parent is checked.
+            If the 'TabId=-1' is included in the list, it means all site pages.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.RunNow">
+            <summary>
+            Whether to run the job immediately or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportDto.IsDirty">
+            <summary>
+            Used to determine if the DB file needs cleanup before starting import or not.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Dto.PageToExport">
+            <summary>
+             Spercifies page to be exported.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Dto.ExportFileInfo">
+            <summary>
+            Export file(s) info.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportFileInfo.ExportPath">
+            <summary>
+            Path for exported files.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ExportFileInfo.ExportSize">
+            <summary>
+            Formatted size of export file
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportDto.SchemaVersion">
+            <summary>
+            Specifies the version of the exportes schema.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportDto.PortalId">
+            <summary>
+            ID of portal to import items to.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportDto.PackageId">
+            <summary>
+            Id of exported package to be imported
+            </summary>
+            <remarks>
+            For security reasons, this name does not have a folder or extension name.
+            These will be used by convention and picked from a very specific location
+            in the portal (<see cref="F:Dnn.ExportImport.Components.Common.Constants.ExportFolder"/>)
+            </remarks>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportDto.CollisionResolution">
+            <summary>
+            Specifies what to do when there is a collision during the import process.
+            See <see cref="P:Dnn.ExportImport.Components.Dto.ImportDto.CollisionResolution"/>
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportDto.ExportDto">
+            <summary>
+            Snapshot of the export dto from the import package
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportDto.ExportFileInfo">
+            <summary>
+            Snapshot of the import file into.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Dto.ImportExportSummary">
+            <summary>
+            Import/Export summary class to provide information about what will happen with this job.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.IncludeProfileProperties">
+            <summary>
+            Does this import/export includes the properties definitions or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.IncludePermissions">
+            <summary>
+            Does this import/export includes the permission or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.IncludeExtensions">
+            <summary>
+            Does this import/export includes the modules or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.IncludeDeletions">
+            <summary>
+            Does this import/export includes the deleted items or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.IncludeContent">
+            <summary>
+            Does this import/export includes content or not.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.ExportMode">
+            <summary>
+            Export mode. Differential or complete.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.FromDate">
+            <summary>
+            Date from which data was taken to perform export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.FromDateString">
+            <summary>
+            Formatted Date from which data was taken to perform export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.ToDate">
+            <summary>
+            Date till which data was taken to perform export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.ToDateString">
+            <summary>
+            Formatted Date till which data was taken to perform export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.SummaryItems">
+            <summary>
+            Summary of each item export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportExportSummary.ExportFileInfo">
+            <summary>
+            Exported file information.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.PackageId">
+            <summary>
+            Package Id. Used to identify the package and path.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.Name">
+            <summary>
+            Name of the package.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.FileName">
+            <summary>
+            Package file name. It is just fake name for UI representation
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.ExporTime">
+            <summary>
+            DateTime when the package was exported.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.ExporTimeString">
+            <summary>
+            Formatted DateTime when the package was exported.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.PortalName">
+            <summary>
+            The portal from which the exported package was created
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.Description">
+            <summary>
+            Package description
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.Thumb">
+            <summary>
+            Path to the thumbnail image for the package.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.ImportPackageInfo.Summary">
+            <summary>
+            Complete summary of import package
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Dto.SummaryItem">
+            <summary>
+            Details of the summary item to show in the export/import summary and progress.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.Category">
+            <summary>
+            Category of the import/export. Also identifier for localization
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.TotalItems">
+            <summary>
+            Total items to import/export.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.TotalItemsString">
+            <summary>
+            Formatted total items.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.ProcessedItems">
+            <summary>
+            Items processed.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.Completed">
+            <summary>
+            Is job finished or not yet.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.ProcessedItemsString">
+            <summary>
+            Formatted processed items.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.ProgressPercentage">
+            <summary>
+            Progress in percentage.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Dto.SummaryItem.Order">
+            <summary>
+            Order to show on UI.
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Engines.ExportImportEngine.CheckpointCallback(Dnn.ExportImport.Components.Services.BasePortableService)">
+            <summary>
+            Callback function to provide a checkpoint mechanism for an <see cref="T:Dnn.ExportImport.Components.Services.BasePortableService"/> implementation.
+            </summary>
+            <param name="service">The <see cref="T:Dnn.ExportImport.Components.Services.BasePortableService"/> implementation</param>
+            <returns>Treu to stop further <see cref="T:Dnn.ExportImport.Components.Services.BasePortableService"/> processing; false otherwise</returns>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Interfaces.IDateTimeConverter">
+            <summary>
+            Contract to convert all the datetiem properties in the class to User's local time
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Components.Interfaces.IDateTimeConverter.ConvertToLocal(DotNetNuke.Entities.Users.UserInfo)">
+            <summary>
+            Converts the datetime properties to user locale.
+            </summary>
+            <param name="userInfo"></param>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Models.ProgressToken.ContinuationKey">
+            <summary>
+            This can be used as a continuation token for the operation. It 
+            is an identifier for next operation/step in import/export process.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Models.ProgressToken.Progress">
+            <summary>
+             Indicates the completed percentage progress of export/import operation.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Scheduler.ExportImportScheduler">
+            <summary>
+            Implements a SchedulerClient for the Exporting/Importing of site items.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Services.BasePortableService">
+            <summary>
+            A abstract class specifying the ability to import and export site different areas.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.Result">
+            <summary>
+            An object to record the export/import progress information.
+            This is set by the export/import engine.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.Repository">
+            <summary>
+            A repository to store exported items in and to retrieve from upon import.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.CheckPoint">
+            <summary>
+            A data structure representing a checkpoint for the export/import task. This can be used to tell the
+            implementor where to resume it's operation if the job was interrupted previously.
+            </summary>
+            <remarks>It is up to each BasePortableService implementor to track its own stages and status values to
+            properly export/import all of its items in/when and interruption occurs.</remarks>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.CheckCancelled">
+            <summary>
+            A callback to the export/import engine to check if the undergoing export/import process was cancelled.
+            <para>The interface concrete classes should keep checking continuously for the cancellation flag to be true</para>
+            <para>If the callback returns true, the BasePortableService implementations should stop any work they do and
+            return control to the caller immediately or as soon as possible.</para>
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.CheckPointStageCallback">
+            <summary>
+            Callback function to provide a checkpoint mechanism for an <see cref="T:Dnn.ExportImport.Components.Services.BasePortableService"/> implementation.
+            The actual method shoul persist the reported checkpoint in the engine so if the process is interrupted,
+            it can be resumed. If the reponse to calling this function was false, then the task should stop
+            processing and return control immediately to the caller.
+            </summary>
+            <returns>True if the implementation to abort progress; false to continue.</returns>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.Category">
+            <summary>
+            Category name for the exportable module. For example: "ASSETS".
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.ParentCategory">
+            <summary>
+            Category name for the parent exportable module. For example: "USERS".
+            If this is null, then the category is a top parent. If this is not null,
+            then this category will be included automatically when the parent is included.
+            </summary>
+        </member>
+        <member name="P:Dnn.ExportImport.Components.Services.BasePortableService.Priority">
+            <summary>
+            A priority for exporting/importing the object. Objects with higher
+            priority are exported/imported first. Highest priority is 0.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Services.PagesExportService">
+            <summary>
+            Service to export/import pages/tabs.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Services.PortalExportService">
+            <summary>
+            Service to export/import portal data.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Services.UsersDataExportService">
+            <summary>
+            Supplementary service to import users additional data.
+            </summary>
+        </member>
+        <member name="T:Dnn.ExportImport.Components.Services.UsersExportService">
+            <summary>
+            Service to export/import users.
+            </summary>
+        </member>
+        <member name="M:Dnn.ExportImport.Services.ExportImportController.GetImportPackages(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get list of packages to import
+            </summary>
+            <param name="keyword">Keyword to search the import package. This will look into the package name and description</param>
+            <param name="order">Order by which the packages list should be sorted. Allowed values: newest, oldest, name</param>
+            <param name="pageIndex">Page index to get</param>
+            <param name="pageSize">Page size. Should not be more than 100.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\bin\DotNetNuke.Authentication.Facebook.XML
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\bin\DotNetNuke.Authentication.Facebook.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\bin\DotNetNuke.Authentication.Facebook.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\bin\DotNetNuke.Instrumentation.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\bin\DotNetNuke.Instrumentation.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\bin\DotNetNuke.Instrumentation.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\obj\Debug\DotNetNuke.Authentication.Facebook.csprojResolveAssemblyReference.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\obj\Debug\DotNetNuke.Authentication.Facebook.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\obj\Debug\DotNetNuke.Authentication.Facebook.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Providers\AuthenticationProviders\DotNetNuke.Authentication.Facebook\obj\Debug\DotNetNuke.Authentication.Facebook.pdb

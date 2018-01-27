@@ -1,0 +1,8 @@
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\bin\ClientDependency.Core.XML
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\bin\ClientDependency.Core.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\bin\ClientDependency.Core.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\obj\Debug\ClientDependency.Core.csproj.CoreCompileInputs.cache
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\obj\Debug\ClientDependency.Core.dll
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\obj\Debug\ClientDependency.Core.pdb
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\bin\ClientDependency.Core.dll.CodeAnalysisLog.xml
+C:\Users\radal\Desktop\DNN_Platform_9.1.1.129-232_Source\Dnn.Platform\DNN Platform\Components\ClientDependency\Source\bin\ClientDependency.Core.dll.lastcodeanalysissucceeded
